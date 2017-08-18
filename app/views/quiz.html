@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title class="title">Friend Finder Quiz</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <link href="assets/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <ul>
+    <li><a class="active" href="home.html">Home</a></li>
+    <li><a class="active" href="#home">API List</a></li>
+    <li><a href="https://github.com/mitchelclow/friendFinder">GitHub Repo</a></li>
+  </ul>
+
+  <div class="container">
+
+    <div class="jumbotron" style="background:#292828; !important" >
+
+      <div class="row">
+
+        <div class="col-md-12">
+
+          <h1 class="resHead" style="color: white">Quiz Questions</h1>
+          
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <img class="chicagoSecond" src="assets/images/trees.jpg">
+
+  <div class="row questionRow">
+
+    <div class="questionsFont">
+
+      <div class="col-md-10">
+
+        <div class="questionsBlock">
+
+          <div class="questionsText">
+
+            <div class="row">
+
+              <div class="col-md-12">
+
+                <h3>About You</h3>
+
+                <form action="/action_page.php" id="usrname">
+                  Name (required): 
+
+                  <div class="nameEntry"><input type="text" name="usrname">
+                  </div>
+
+                </form>
+
+              </div>
+
+            </div>
+
+            <div class="row">
+
+              <div class="col-md-12">
+
+
+                <form action="/action_page.php" id="usrpic">
+                  Link to photo image (required): 
+
+                  <div class="photoEntry">
+                    <input type="text" name="usrpic">
+                  </div>
+
+                </form>
+
+
+              </div>
+
+            </div>
+
+            <div class="row">
+
+              <div class="col-md-12">
+
+                <h3>Question 1</h3>
+
+                Your mind is always buzzing with unexplored ideas and plans.
+                <br>
+                <select id="1">
+                  <option vaule="blank" disabled selected>Select from below</option>
+                  <option value="1">1 (Strongly Disagree)</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (Strongly Agree)</option>
+                </select>
+
+              </div>
+
+            </div>
+
+            <div class="row">
+
+              <div class="col-md-12">
+
+                <h3>Question 2</h3>
+
+                Generally speaking, you rely more on your experience than your imagination.
+
+                <br>
+
+                <select id="2">
+                  <option vaule="blank" disabled selected>Select from below</option>
+                  <option value="1">1 (Strongly Disagree)</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (Strongly Agree)</option>
+                </select>
+
+
+              </div>
+
+            </div>
+
+            <div class="row">
+
+              <div class="col-md-12">
+
+                <h3>Question 3</h3>
+
+                You find it easy to stay relaxed and focused even when there is some pressure.
+
+                <br>
+
+                <select id="3">
+                  <option vaule="blank" disabled selected>Select from below</option>
+                  <option value="1">1 (Strongly Disagree)</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (Strongly Agree)</option>
+                </select>
+
+              </div>
+
+            </div>
+
+            <div class="row">
+
+              <div class="col-md-12">
+
+                <h3>Question 4</h3>
+
+                You rarely do something just out of sheer curiosity.
+
+                <br>
+
+                <select id="4">
+                  <option vaule="blank" disabled selected>Select from below</option>
+                  <option value="1">1 (Strongly Disagree)</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (Strongly Agree)</option>
+                </select>
+
+              </div>
+
+            </div>
+
+            <div class="row">
+
+              <div class="col-md-12">
+
+                <h3>Question 5</h3>
+
+                People can rarely upset you.
+
+                <br>
+
+                <select id="5">
+                  <option vaule="blank" disabled selected>Select from below</option>
+                  <option value="1">1 (Strongly Disagree)</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (Strongly Agree)</option>
+                </select>
+
+              </div>
+
+            </div>
+
+            <div class="row">
+
+              <div class="col-md-12">
+
+                <h3>Question 6</h3>
+
+                It is often difficult for you to relate to other people’s feelings.
+
+                <br>
+
+                <select id="6">
+                  <option vaule="blank" disabled selected>Select from below</option>
+                  <option value="1">1 (Strongly Disagree)</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (Strongly Agree)</option>
+                </select>
+
+              </div>
+
+            </div>
+
+            <div class="row">
+
+              <div class="col-md-12">
+
+                <h3>Question 7</h3>
+
+                In a discussion, truth should be more important than people’s sensitivities.
+
+                <br>
+
+                <select id="7">
+                  <option vaule="blank" disabled selected>Select from below</option>
+                  <option value="1">1 (Strongly Disagree)</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (Strongly Agree)</option>
+                </select>
+
+              </div>
+
+            </div>
+
+            <div class="row">
+
+              <div class="col-md-12">
+
+                <h3>Question 8</h3>
+
+                You rarely get carried away by fantasies and ideas.
+
+                <br>
+
+                <select id="8">
+                  <option vaule="blank" disabled selected>Select from below</option>
+                  <option value="1">1 (Strongly Disagree)</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (Strongly Agree)</option>
+                </select>
+
+              </div>
+
+            </div>
+
+            <div class="row">
+
+              <div class="col-md-12">
+
+                <h3>Question 9</h3>
+
+                You think that everyone’s views should be respected regardless of whether they are supported by facts or not.
+
+                <br>
+
+                <select id="9">
+                  <option vaule="blank" disabled selected>Select from below</option>
+                  <option value="1">1 (Strongly Disagree)</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (Strongly Agree)</option>
+                </select>
+
+              </div>
+
+            </div>
+
+            <div class="row">
+
+              <div class="col-md-12">
+
+                <h3>Question 10</h3>
+
+                You feel more energetic after spending time with a group of people.
+
+                <br>
+
+                <select id="10">
+                  <option vaule="blank" disabled selected>Select from below</option>
+                  <option value="1">1 (Strongly Disagree)</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (Strongly Agree)</option>
+                </select>
+
+              </div>
+
+            </div>
+
+            <br>
+
+
+            <div class="row">
+
+              <div class="col-md-12">
+
+
+                <section>
+                 <button id="js-trigger-overlay" type="button">Submit</button>
+               </section></a>
+             </div>
+
+           </div>
+
+         </div>
+
+       </div>
+
+     </div>
+
+   </div>
+
+ </div>
+
+
+    <div class="footer">
+      <div class="footerText">Copyright ® Mitchel Clow
+      </div>
+    </div>
+  
+
+</div>
+
+</body>
+
+</html>
