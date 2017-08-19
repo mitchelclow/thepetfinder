@@ -1,7 +1,7 @@
 body
 {
-background-image: url("images/background.png");
-background-size: cover;
+background-image: url("images/otherbackground.png");
+background-size: ;
 }
 
 .resHead
@@ -79,14 +79,7 @@ section button:hover {
   -webkit-mask-image:-webkit-gradient(linear, left bottom, left top, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)))
 }
 
-.chicagoSecond {
-  opacity: 0.5;
-  position: fixed;
-  bottom: 0;
-  height: 70%;
-  width: 100%;
-  padding-left: 169px;  
-}
+
 
 ul {
     list-style-type: none;
