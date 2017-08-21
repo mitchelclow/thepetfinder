@@ -1,6 +1,9 @@
+// Requiring npm packages
 var express = require('express');
 var bodyParser = require('body-parser');
 var exphbs = require('express-handlebars');
+var inquirer = require('inquirer');
+
 var homeRouter = require('./src/controllers/home.js');
 var app = express();
 var port = process.env.PORT || 3000
