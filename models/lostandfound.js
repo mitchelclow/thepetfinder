@@ -1,5 +1,5 @@
 module.exports = function(sequelize, Datatypes){
-var Userlost = sequalize.define("Userlost", {
+var Userlost = sequelize.define("Userlost", {
   dateMissing: DataTypes.string,
   petName: DataTypes.string,
   petGender: DataTypes.string,
