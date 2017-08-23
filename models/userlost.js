@@ -1,5 +1,6 @@
-module.exports = function(sequelize, Datatypes){
+module.exports = function(sequelize, DataTypes){
 var UserLost = sequelize.define("user_lost", {
+  photolost: DataTypes.STRING,
   dateMissing: DataTypes.STRING,
   petName: DataTypes.STRING,
   petGender: DataTypes.STRING,
