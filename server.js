@@ -4,17 +4,20 @@ var bodyParser = require('body-parser');
 var exphbs = require('express-handlebars');
 var inquirer = require('inquirer');
 var path = require('path');
-
+var db = require('./models');
 var homeRouter = require('./controllers/home.js');
 var app = express();
-var port = process.env.PORT || 3000
+var port = process.env.PORT || 3000;
+
+db.sequelize.sync().then(function(){
+  app.listen(port, function(){
+    console.log("Server listening on " + port);
+});
 app.set("views", __dirname + "/views");
 app.engine("handlebars", exphbs({
   defaultLayout: 'main'
 }));
 app.set("view engine", "handlebars");
 app.use(express.static('views'));
-// app.use(homeRouter);
-app.listen(port, function(){
-  console.log("server listening on " + port);
-})
+
+});
