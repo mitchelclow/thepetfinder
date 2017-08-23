@@ -196,3 +196,21 @@ font-family: 'Montserrat', sans-serif; font-size: 20px;
 {
 font-family: 'Montserrat', sans-serif; font-size: 20px;  
 }
+
+.faqContainer
+
+{
+  width: 100%;
+  max-width: 1047px;
+  padding-top: 700px;
+  padding-bottom: 50px;
+  max-height: 100%;
+  margin: 100px 0 0 31px;
+  background: #F4F3DE;
+  border: 2px solid #000000;
+  border-radius: 25px;
+}
+
+.tabby {
+  width: 46%;
+}
