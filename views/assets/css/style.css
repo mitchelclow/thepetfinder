@@ -21,7 +21,7 @@ background-size: cover;
   font-size: 25px;
 }
 
-.navText 
+.navText
 {
     font-family: 'Montserrat', sans-serif!important;
 }
@@ -54,7 +54,7 @@ section button {
   margin: 0 auto;
   font-size: 2.0rem;
   padding: 1.25rem 2.5rem;
-  display: block;
+  /*display: block;*/
   background-color: #333;
   border: 1px solid transparent;
   color: white;
@@ -73,7 +73,11 @@ section button:hover {
 }
 
 .firstButton {
-	text-align: center;
+	padding-left: 500px;
+}
+
+.secondButton {
+	padding-left: 50px;
 }
 
 .chicago {
