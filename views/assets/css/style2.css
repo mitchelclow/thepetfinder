@@ -168,7 +168,7 @@ font-family: 'Montserrat', sans-serif; font-size: 20px;
   width: 100%;
   max-width: 1047px;
   padding-top: 700px;
-  padding-bottom: 50px;
+  /*padding-bottom: 50px;*/
   max-height: 100%;
   margin: 100px 0 0 45px;
   background: #F4F3DE;
@@ -179,22 +179,23 @@ font-family: 'Montserrat', sans-serif; font-size: 20px;
 .dogPicture {
 
   margin-top: -680px;
-  padding-left: 5px;
+  padding-left: 10px;
 }
 
 .fido {
-  width: 85%
+	width: 100%;
 }
 
 .aboutText {
   font-family: 'Montserrat', sans-serif; font-size: 160px;
-  padding-right: 150px;
+  padding-left: 85px;
 }
 
 .aboutDescrip
 
 {
-font-family: 'Montserrat', sans-serif; font-size: 20px;  
+font-family: 'Montserrat', sans-serif; font-size: 20px;
+padding: 3px 5px 0 15px;
 }
 
 .faqContainer
@@ -212,5 +213,11 @@ font-family: 'Montserrat', sans-serif; font-size: 20px;
 }
 
 .tabby {
-  width: 46%;
+  width: 40%;
+	padding-right: 10px;
+}
+
+.faqText {
+  font-family: 'Montserrat', sans-serif; font-size: 160px;
+  padding-left: 5px;
 }
