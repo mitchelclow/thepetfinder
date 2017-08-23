@@ -206,18 +206,24 @@ padding: 3px 5px 0 15px;
   padding-top: 700px;
   padding-bottom: 50px;
   max-height: 100%;
-  margin: 100px 0 0 31px;
+  margin: 100px 0 0 45px;
   background: #F4F3DE;
   border: 2px solid #000000;
   border-radius: 25px;
 }
 
 .tabby {
-  width: 40%;
+  width: 100%;
 	padding-right: 10px;
 }
 
 .faqText {
   font-family: 'Montserrat', sans-serif; font-size: 160px;
-  padding-left: 5px;
 }
+
+/*@media screen and (max-width: 1535px) {
+	.aboutText {
+		font-size: 120px;
+		margin-left: 115px;
+	}
+}*/
