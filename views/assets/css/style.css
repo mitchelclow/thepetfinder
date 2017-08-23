@@ -21,6 +21,11 @@ background-size: cover;
   font-size: 25px;
 }
 
+.navText 
+{
+    font-family: 'Montserrat', sans-serif!important;
+}
+
 
 body {
   min-height: 100%;
@@ -168,4 +173,13 @@ font-family: 'Montserrat', sans-serif; font-size: 20px;
 
 .row {
   margin-right: 0 !important;
+}
+
+a {
+  text-decoration: none!important;
+}
+
+.buttonPosition
+{
+  margin: 0 manual;
 }

@@ -15,6 +15,8 @@
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
+  <!-- <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css"> -->
+
   <link href="assets/css/style.css" rel="stylesheet">
 </head>
 
@@ -22,11 +24,13 @@
 
 <ul>
 
-  <li><a class="active" href="home.html">Home</a></li>
-  <li><a class="active" href="#home">Lost Pets</a></li>
-  <li><a class="active" href="#home">Found Pets</a></li>
-  <li><a href="about.html">About</a></li>
-  <li><a href="contact.html">Contact</a></li>
+  <div class="navText">
+    <li><a class="active" href="index.html">🐾</a></li>
+    <li><a class="active" href="ifound.html">I Found a Pet</a></li>
+    <li><a class="active" href="ilost.html">I Lost a Pet</a></li>
+    <li><a class="active" href="lostfoundpets.html">Lost/Found Pets List</a></li>
+    <li><a class="active" href="contact.html">About/Contact/FAQ</a></li>
+  </div>
 </ul>
 
 
@@ -68,22 +72,32 @@
       <br>
       <br>
       <br>
-       <br>
+      <br>
       <br>
       <br>
       <br>
       <br>
 
 
-      <div class="row">
+      <div class="row buttonPostion">
 
-        <div class="col-md-12">
+        <div class="col-md-6">
 
 
           <section>
-           <a href="quiz.html"><button id="js-trigger-overlay" type="button" </a>I Lost My Pet!</button>
-          </section></a>
+           <a href="ilost.html"><button id="js-trigger-overlay buttonStyle" type="button" </a>I Lost My Pet</button>
+          </section>
+
         </div>
+
+        <div class="col-md-6">
+
+          <section>
+           <a href="ilost.html"><button id="js-trigger-overlay buttonStyle" type="button" </a>I Found A Pet</button>
+          </section>
+
+        </div>
+
 
       </div>
 
