@@ -225,3 +225,13 @@ padding: 3px 5px 0 15px;
 		margin-left: 115px;
 	}
 }*/
+
+.navText
+{
+    font-family: 'Montserrat', sans-serif!important;
+}
+
+
+a {
+  text-decoration: none!important;
+}
