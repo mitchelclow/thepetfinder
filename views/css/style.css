@@ -1,34 +1,25 @@
-.resText
+body
 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 25px;
+background-image: url("../images/background.png");
+background-size: cover;
 }
 
 .resHead
 {
-
+	text-align: center;
   font-family: 'Montserrat', sans-serif;
+  color: black!important;
   font-size: 75px;
   text-shadow: 1px 1px orange;
 }
 
-body
+.resText
 {
-background: url("../images/background.png")no-repeat center center fixed;
-background-size: cover;
+	text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  color: black!important;
+  font-size: 25px;
 }
-
-.btn {
-  margin-top: 350px;
-}
-
-.navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.9)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-  }
-/*
-
-
-
 
 .navText
 {
@@ -62,9 +53,9 @@ body {
 section button {
   margin: 0 auto;
   font-size: 2.0rem;
-  padding: 1.25rem 2.5rem;*/
-  /*display: block;
-/*  background-color: #333;
+  padding: 1.25rem 2.5rem;
+  /*display: block;*/
+  background-color: #333;
   border: 1px solid transparent;
   color: white;
   font-weight: 300;
@@ -73,8 +64,8 @@ section button {
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-}*/
-/*
+}
+
 section button:hover {
   background-color: #ffffff;
   color: black;
@@ -194,6 +185,5 @@ a {
 
 .buttonPosition
 {
-  padding-top: 1000px;
+  margin: 0;
 }
-*/
