@@ -15,101 +15,54 @@
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-  <!-- <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css"> -->
-
   <link href="assets/css/style.css" rel="stylesheet">
 </head>
 
 <body>
 
-<ul>
-
-  <div class="navText">
-    <li><a class="active" href="index.html">🐾</a></li>
-    <li><a class="active" href="ifound.html">I Found a Pet</a></li>
-    <li><a class="active" href="ilost.html">I Lost a Pet</a></li>
-    <li><a class="active" href="lostfoundpets.html">Lost/Found Pets List</a></li>
-    <li><a class="active" href="contact.html">About/Contact/FAQ</a></li>
-  </div>
-</ul>
-
-
-      <div class="row">
-
-        <div class="col-md-12">
-
-          <div class="resHead" style="color: white">Lost Pet Finder</div>
-
-        </div>
-
+<nav class="navbar navbar-expand-sm navbar-fixed-top">
+      <a class="navbar-brand" href="index.html">🐾</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="ifound.html">I Found a Pet</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="ilost.html">I Lost a Pet</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="lostfoundpets.html">Lost/Found Pets List</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">About/FAQ/Contact</a>
+          </li>
+        </ul> 
       </div>
+    </nav>
 
-      <div class="row">
-
-        <div class="col-md-12">
-
-
-          <div class="resText" style="color:white">Fido's gone missing? We've got you covered.</div>
-
-
-        </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="resHead text-center">Lost Pet Finder</h1>
+        <h3 class="resText text-center">Fido's gone missing? We've got you covered.</h3>
       </div>
-
-
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-
-
-      <div class="row buttonPostion">
-
-        <div class="col-md-6 firstButton">
-
-
-          <section>
-           <a href="ilost.html"><button id="js-trigger-overlay buttonStyle" type="button" </a>I Lost My Pet</button>
-          </section>
-
-        </div>
-
-        <div class="col-md-6 secondButton">
-
-          <section>
-           <a href="ilost.html"><button id="js-trigger-overlay buttonStyle" type="button" </a>I Found A Pet</button>
-          </section>
-
-        </div>
-
-
-      </div>
-
     </div>
-
-
-
   </div>
 
-  <!-- <img class="chicago" src="assets/images/smilingwithdog.jpg"> -->
-
-
+  <div class="container">
+    <div class="row">
+      <div class="col-md-offset-3 col-md-6 text-center">
+          <a href="ilost.html"><button type="button" class="btn btn-primary">I Lost My Pet</button></a>
+          <a href="ifound.html"><button type="button" class="btn btn-primary">I Found A Pet</button></a>
+      </div>
+    </div>
+  </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 </body>
 
 </html>
