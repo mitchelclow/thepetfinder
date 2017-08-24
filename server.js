@@ -15,7 +15,7 @@ var port = process.env.PORT || 3000;
 //   defaultLayout: 'main'
 // }));
 // app.set("view engine", "handlebars");
-app.use(express.static('views'));
+app.use(express.static('./models'));
 
 //When working on local machine, uncomment this and comment the stuff below
 
