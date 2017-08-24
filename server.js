@@ -17,8 +17,16 @@ var port = process.env.PORT || 3000;
 // app.set("view engine", "handlebars");
 app.use(express.static('views'));
 
-db.sequelize.sync().then(function(){
-  app.listen(port, function(){
-    console.log("Server listening on " + port);
-  });
+//When working on local machine, uncomment this and comment the stuff below
+
+// db.sequelize.sync().then(function(){
+//   app.listen(port, function(){
+//     console.log("Server listening on " + port);
+//   });
+// });
+
+//When deploying to heroku.  Until we get stull working, comment above and uncomment below
+
+app.listen(port, function(){
+  console.log("Server listening on " + port);
 });
