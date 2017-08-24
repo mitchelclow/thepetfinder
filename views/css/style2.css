@@ -235,3 +235,45 @@ padding: 3px 5px 0 15px;
 a {
   text-decoration: none!important;
 }
+
+.lost_found_container {
+
+  width: 100%;
+  padding-left: 10px;
+  margin: 20px 0 10px -134px;
+  background: #FFFFF9;
+  border: 2px solid #000000;
+  border-radius: 28px;
+
+}
+
+.lostPets {
+
+  padding-bottom: 250px;
+
+}
+
+.foundPets {
+
+padding-bottom: 250px;
+}
+
+.lostPetsHeader {
+font-family: 'Questrial', sans-serif;
+font-size: 50px;
+}
+
+.foundPetsHeader {
+  font-family: 'Questrial', sans-serif;
+  font-size: 50px;
+}
+
+.lineForPage {
+  color: white;
+  size: 10px;
+}
+
+.blackLine {
+  height: 4px;
+  width: 1056px;
+}
