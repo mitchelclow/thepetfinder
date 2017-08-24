@@ -1,6 +1,6 @@
 body
 {
-background-image: url("../images/otherbackground.png");
+background-image: url("./images/plant.jpg");
 background-size: ;
 }
 
@@ -204,7 +204,7 @@ padding: 3px 5px 0 15px;
   padding-top: 700px;
   padding-bottom: 50px;
   max-height: 100%;
-  margin: 100px 0 0 45px;
+  margin: 100px 0 25px 45px;
   background: #F4F3DE;
   border: 2px solid #000000;
   border-radius: 25px;
@@ -241,9 +241,9 @@ a {
   width: 100%;
   padding-left: 10px;
   margin: 20px 0 10px -134px;
-  background: #FFFFF9;
+  background: #697388;
   border: 2px solid #000000;
-  border-radius: 28px;
+  border-radius: 10px;
 
 }
 
@@ -261,11 +261,13 @@ padding-bottom: 250px;
 .lostPetsHeader {
 font-family: 'Questrial', sans-serif;
 font-size: 50px;
+color: black!important;
 }
 
 .foundPetsHeader {
   font-family: 'Questrial', sans-serif;
   font-size: 50px;
+  color: black!important;
 }
 
 .lineForPage {
