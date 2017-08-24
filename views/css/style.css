@@ -73,11 +73,11 @@ section button:hover {
 }
 
 .firstButton {
-	padding-left: 500px;
+	padding-left: 510px;
 }
 
 .secondButton {
-	padding-left: 50px;
+	padding-left: 60px;
 }
 
 .chicago {
@@ -185,5 +185,6 @@ a {
 
 .buttonPosition
 {
-  margin: 0;
+  margin-top: 400px;
+  margin-right: 10px;
 }
