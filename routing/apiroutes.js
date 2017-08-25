@@ -1,30 +1,52 @@
-// ===============================================================================
-// LOAD DATA
-// We are linking our routes to a series of "data" sources.
-// These data sources hold arrays of information on table-data, waitinglist, etc.
-// ===============================================================================
-var uselost = require("./models");
-var userfound = require("./models");
-// ===============================================================================
-// ROUTING
-// ===============================================================================
+// *********************************************************************************
+// api-routes.js - this file offers a set of routes for displaying and saving data to the db
+// *********************************************************************************
+
+// Dependencies
+// =============================================================
+var dbLost = require("./models/userlost");
+var dbFound = require("./models/userfound")
+
+// Routes
+// =============================================================
 module.exports = function(app) {
-  console.log("apiroutes init");
-  // API GET Requests
-  // Below code handles when users "visit" a page.
-  // In each of the below cases when a user visits a link
-  // (ex: localhost:PORT/api/admin... they are shown a JSON of the data in the table)
-  // ---------------------------------------------------------------------------
-  app.get("/api/thepetfinder", function(req, res) {
-    res.json(thepetfinder);
+
+  // GET route for getting all of the posts
+  app.get("/api/posts/", function(req, res) {
+    dbLost.UserLost.findAll({})
+    .then(function(dbPost) {
+      res.json(dbPost);
+    });
   });
 
-  app.post("/api/thepetfinder", function(req, res) {
-    // Note the code here. Our "server" will respond to requests and let users know if they have a table or not.
-    // It will do this by sending out the value "true" have a table
-  console.log("Yay!!!",req.body);
-    var newFriend = req.body;
-
+  // Get rotue for retrieving a single post
+  app.get("/api/posts/:id", function(req, res) {
+    dbLost.UserLost.findOne({
+      where: {
+        id: req.params.id
+      }
+    })
+    .then(function(dbPost) {
+      res.json(dbPost);
+    });
   });
-}
-// ------
+
+  // POST route for saving a new post
+  app.post("/api/posts", function(req, res) {
+    console.log(req.body);
+    dbLost.UserLost.create({
+      namelost: req.body.namelost,
+      petName: req.body.petName,
+      emaillost: req.body.emailLost,
+      phonelost: req.body.phoneLost,
+      lastseenAddress: req.body.addressLost,
+      typeofAnimal: req.body.typeLost,
+      dateLost: req.body.dateLost,
+      genderLost: req.body.genderLost,
+      addlInfolost: req.body.commentLost
+    })
+    .then(function(dbPost) {
+      res.json(dbPost);
+    });
+  });
+};
