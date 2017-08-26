@@ -7,7 +7,7 @@ var UserFound = sequelize.define("user_found", {
         len: [1]
       }
   },
-  emailfound: {
+  emailFound: {
     type: DataTypes.STRING,
     allowNull: false,
       validate: {
@@ -28,7 +28,7 @@ var UserFound = sequelize.define("user_found", {
         len: [1]
       }
   },
-  typeofAnimal: {
+  typeFound: {
     type: DataTypes.STRING,
     allowNull: false,
       validate: {
@@ -49,7 +49,7 @@ var UserFound = sequelize.define("user_found", {
         len: [1]
       }
   },
-  addlInfofound: {
+  commentLost: {
     type: DataTypes.STRING
   }
 });

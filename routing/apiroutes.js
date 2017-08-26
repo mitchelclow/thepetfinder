@@ -29,7 +29,7 @@ module.exports = function(app, db) {
     });
   });
 
-  // POST route for saving a new post
+  // POST route for saving a new post to lost file
   app.post("/api/posts", function(req, res) {
     console.log(req.body);
     db.user_lost.create(
@@ -39,4 +39,24 @@ module.exports = function(app, db) {
       res.redirect('../lostDisplay.html');
     });
   });
+
+
+// POST route for saving a new post to found file
+app.post("/api/posts", function(req, res) {
+  console.log(req.body);
+  db.user_found.create({
+    // req.body
+    nameFound: req.body.nameFound,
+    emailFound: req.body.emailFound,
+    phoneFound: req.body.phoneFound,
+    addressFound: req.body.addressFound,
+    typeFound: req.body.typeFound,
+    dateFound: req.body.dateFound,
+    genderFound: req.body.genderFound,
+    commentFound: req.body.commentFound
+  })
+  .then(function(dbPost) {
+    res.json(dbPost);
+  });
+});
 };
