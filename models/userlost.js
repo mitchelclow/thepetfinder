@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes){
 var UserLost = sequelize.define("user_lost", {
-  namelost: {
+  nameLost: {
     type: DataTypes.STRING,
     allowNull: false,
       validate: {
@@ -14,28 +14,28 @@ var UserLost = sequelize.define("user_lost", {
         len: [1]
       }
   },
-  emaillost: {
+  emailLost: {
     type: DataTypes.STRING,
     allowNull: false,
       validate: {
         len: [1]
       }
   },
-  phonelost: {
+  phoneLost: {
     type: DataTypes.STRING,
     allowNull: false,
       validate: {
         len: [1]
       }
   },
-  lastseenAddress: {
+  addressLost: {
     type: DataTypes.STRING,
     allowNull: false,
       validate: {
         len: [1]
       }
   },
-  typeofAnimal: {
+  typeLost: {
     type: DataTypes.STRING,
     allowNull: false,
       validate: {
@@ -56,7 +56,7 @@ var UserLost = sequelize.define("user_lost", {
         len: [1]
       }
   },
-  addlInfolost: {
+  commentLost: {
     type: DataTypes.STRING
   }
 });

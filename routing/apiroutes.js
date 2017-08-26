@@ -4,16 +4,14 @@
 
 // Dependencies
 // =============================================================
-var dbLost = require("./models/userlost");
-var dbFound = require("./models/userfound")
 
 // Routes
 // =============================================================
-module.exports = function(app) {
+module.exports = function(app, db) {
 
   // GET route for getting all of the posts
   app.get("/api/posts/", function(req, res) {
-    dbLost.UserLost.findAll({})
+    db.UserLost.findAll({})
     .then(function(dbPost) {
       res.json(dbPost);
     });
@@ -21,7 +19,7 @@ module.exports = function(app) {
 
   // Get rotue for retrieving a single post
   app.get("/api/posts/:id", function(req, res) {
-    dbLost.UserLost.findOne({
+    db.UserLost.findOne({
       where: {
         id: req.params.id
       }
@@ -34,16 +32,17 @@ module.exports = function(app) {
   // POST route for saving a new post
   app.post("/api/posts", function(req, res) {
     console.log(req.body);
-    dbLost.UserLost.create({
-      namelost: req.body.namelost,
+    db.user_lost.create({
+      // req.body
+      nameLost: req.body.namelost,
       petName: req.body.petName,
-      emaillost: req.body.emailLost,
-      phonelost: req.body.phoneLost,
-      lastseenAddress: req.body.addressLost,
-      typeofAnimal: req.body.typeLost,
+      emailLost: req.body.emailLost,
+      phoneLost: req.body.phoneLost,
+      addressLost: req.body.addressLost,
+      typeLost: req.body.typeLost,
       dateLost: req.body.dateLost,
       genderLost: req.body.genderLost,
-      addlInfolost: req.body.commentLost
+      commentLost: req.body.commentLost
     })
     .then(function(dbPost) {
       res.json(dbPost);

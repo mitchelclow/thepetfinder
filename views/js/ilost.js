@@ -27,20 +27,20 @@ $(document).ready(function() {
   $(lostForm).on("submit", function handleFormSubmit(event) {
     event.preventDefault();
     // Wont submit the post if we are missing a body or a title
-    if (!petName.val().trim() || !userName.val().trim() || !emailLost.val().trim() || !phoneLost.val().trim()) {
-      return;
-    }
+    // if (!petName.val().trim() || !nameLost.val().trim() || !emailLost.val().trim() || !phoneLost.val().trim()) {
+    //   return;
+    // }
     // Constructing a newPost object to hand to the database
     var newPost = {
-      namelost: userName.val().trim(),
+      nameLost: userName.val().trim(),
       petName: petName.val().trim(),
-      emaillost: emailLost.val().trim(),
-      phonelost: phoneLost.val().trim(),
-      lastseenAddress: addressLost.val().trim(),
-      typeofAnimal: typeLost.val().trim(),
+      emailLost: emailLost.val().trim(),
+      phoneLost: phoneLost.val().trim(),
+      addressLost: addressLost.val().trim(),
+      typeLost: typeLost.val().trim(),
       dateLost: dateLost.val().trim(),
       genderLost: genderLost.val().trim(),
-      addlInfolost: commentLost.val().trim()
+      commentLost: commentLost.val().trim()
     };
 
     console.log(newPost);
