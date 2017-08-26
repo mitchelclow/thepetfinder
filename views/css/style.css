@@ -50,15 +50,21 @@ body {
   margin: 0 auto;
 }
 
-section button {
-  margin: 0 auto;
+.buttonStyle:hover {
+  background-color: #ffffff;
+  border-color: black;
+  color: black;
+}
+
+.buttonStyle {
   font-size: 2.0rem;
   padding: 1.25rem 2.5rem;
-  /*display: block;*/
-  background-color: #333;
   border: 1px solid transparent;
+  background-color: #333;
+  margin: 3px;
   color: white;
-  font-weight: 300;
+  text-decoration: none;
+
   -webkit-border-radius: 3px;
   border-radius: 3px;
   -webkit-transition: all 0.3s ease-in-out;
@@ -66,18 +72,14 @@ section button {
   transition: all 0.3s ease-in-out;
 }
 
-section button:hover {
-  background-color: #ffffff;
-  color: black;
-  border-color: black;
-}
+@media (min-width: 767px) { 
+  .firstButton {
+    text-align: right;
+  }
 
-.firstButton {
-	padding-left: 510px;
-}
-
-.secondButton {
-	padding-left: 60px;
+  .secondButton {
+    text-align: left;
+  }
 }
 
 .chicago {
@@ -185,6 +187,6 @@ a {
 
 .buttonPosition
 {
+  text-align: center;
   margin-top: 400px;
-  margin-right: 10px;
 }
