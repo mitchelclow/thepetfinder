@@ -1,22 +1,22 @@
 {
   "development": {
     "username": "root",
-    "password": "Wolfpack4",
-    "database": "petfinder_db",
+    "password": "0live3932",
+    "database": "thepetfinder_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "Wolfpack4",
-    "database": "petfinder_db",
+    "password": "0live3932",
+    "database": "thepetfinder_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
     "username": "root",
-    "password": "Wolfpack4",
-    "database": "petfinder_db",
+    "password": "0live3932",
+    "database": "thepetfinder_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   }
