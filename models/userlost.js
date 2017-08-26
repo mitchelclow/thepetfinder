@@ -58,9 +58,6 @@ var UserLost = sequelize.define("user_lost", {
   },
   commentLost: {
     type: DataTypes.STRING
-  },
-  photoLost: {
-    type:
   }
 });
 return UserLost;
