@@ -10,8 +10,8 @@
 module.exports = function(app, db) {
 
   // GET route for getting all of the posts
-  app.get("/api/posts/", function(req, res) {
-    db.UserLost.findAll({})
+  app.get("/api/posts", function(req, res) {
+    db.user_lost.findAll({})
     .then(function(dbPost) {
       res.json(dbPost);
     });
@@ -19,7 +19,7 @@ module.exports = function(app, db) {
 
   // Get rotue for retrieving a single post
   app.get("/api/posts/:id", function(req, res) {
-    db.UserLost.findOne({
+    db.user_lost.findOne({
       where: {
         id: req.params.id
       }
@@ -32,20 +32,11 @@ module.exports = function(app, db) {
   // POST route for saving a new post
   app.post("/api/posts", function(req, res) {
     console.log(req.body);
-    db.user_lost.create({
-      // req.body
-      nameLost: req.body.namelost,
-      petName: req.body.petName,
-      emailLost: req.body.emailLost,
-      phoneLost: req.body.phoneLost,
-      addressLost: req.body.addressLost,
-      typeLost: req.body.typeLost,
-      dateLost: req.body.dateLost,
-      genderLost: req.body.genderLost,
-      commentLost: req.body.commentLost
-    })
+    db.user_lost.create(
+      req.body
+    )
     .then(function(dbPost) {
-      res.json(dbPost);
+      res.redirect('../lostDisplay.html');
     });
   });
 };

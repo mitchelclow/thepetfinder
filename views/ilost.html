@@ -91,10 +91,10 @@
                 <label class="control-label col-sm-2" for="genderLost">Gender:</label>
                 <div class="col-sm-10">
                   <label class="radio-inline">
-                    <input type="radio" name="genderLost">Male
+                    <input  id="genderMale" type="radio" name="genderLost" value="Male">Male
                   </label>
                   <label class="radio-inline">
-                    <input type="radio" name="genderLost">Female
+                    <input  id="genderFemale" type="radio" name="genderLost" value="Female">Female
                   </label>
                 </div>
               </div>
@@ -144,6 +144,34 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <!-- <script src="js/ilost.js" type="text/javascript"></script> -->
+
+  <script>
+  function dev()
+  {
+  var lostForm = $(".lost-form");
+  var userName = $("#userName");
+  var petName = $("#petName");
+  var emailLost = $("#emailLost");
+  var phoneLost = $("#phoneLost");
+  var addressLost = $("#addressLost");
+  var typeLost = $("#typeLost");
+  var dateLost = $("#dateLost");
+  var genderLost = $("#genderLost");
+  var commentLost = $("#commentLost");
+
+  userName.val('Tony')
+  petName.val('Lassie');
+  emailLost.val('masdf@gmail.com');
+  phoneLost.val('343-343-4343');
+  addressLost.val('1234 street');
+  typeLost.val('dinosaur');
+  dateLost.val('2017-04-19');
+  $("#genderMale").prop("checked", true);
+  commentLost.val('comment');
+  }
+
+  dev();
+  </script>
 </body>
 
 </html>

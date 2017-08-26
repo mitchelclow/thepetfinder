@@ -6,9 +6,9 @@ $(document).ready(function() {
 
   // This function grabs posts from the database and updates the view
   function getPosts() {
-    $.get("/api/thepetfinder", function(data) {
+    $.get("./api/posts", function(data) {
       console.log("Posts", data);
-      posts = data;
+      posts = data.reverse();
       if (!posts || !posts.length) {
         displayEmpty();
       }
@@ -41,9 +41,8 @@ $(document).ready(function() {
     var newPostDate = $("<small>");
     newPostDate.css({
       float: "right",
-      "font-weight": "700",
-      "margin-top":
-      "-15px"
+      "font-weight": "400",
+      "font-size": "15px"
     });
     var newPostPanelBody = $("<div>");
     newPostPanelBody.addClass("panel-body");
@@ -52,21 +51,21 @@ $(document).ready(function() {
     formattedDate = moment(formattedDate).format("MMMM Do YYYY, h:mm:ss a");
     newPostDate.text(formattedDate);
     var newAnimalType = $("<p>");
-    newAnimalType.text("Animal Type: " + post.typeofAnimal);
+    newAnimalType.text("Animal Type: " + post.typeLost);
     var newLostAddress = $("<p>");
-    newLostAddress.text("Address Last Seen: " + post.lastseenAddress);
+    newLostAddress.text("Address Last Seen: " + post.addressLost);
     var newLostDate = $("<p>");
     newLostDate.text("Date Lost: " + post.dateLost);
     var newLostGender = $("<p>");
     newLostGender.text("Gender: " + post.genderLost);
     var newLostComment = $("<p>");
-    newLostComment.text("Additonal Info: " + post.addlInfolost);
+    newLostComment.text("Additonal Info: " + post.commentLost);
     var newLostName = $("<p>");
-    newLostName.text("Contact Name: " + post.namelost);
+    newLostName.text("Contact Name: " + post.nameLost);
     var newLostEmail = $("<p>");
-    newLostEmail.text("Contact Email: " + post.emaillost);
+    newLostEmail.text("Contact Email: " + post.emailLost);
     var newLostPhone = $("<p>");
-    newLostPhone.text("Contact Phone: " + post.phonelost);
+    newLostPhone.text("Contact Phone: " + post.phoneLost);
 
     newPostTitle.append(newPostDate);
     newPostPanelHeading.append(newPostTitle);
@@ -79,8 +78,8 @@ $(document).ready(function() {
     newPostPanelBody.append(newLostEmail);
     newPostPanelBody.append(newLostPhone);
 
-    newPostPanel.prepend(newPostPanelHeading);
-    newPostPanel.prepend(newPostPanelBody);
+    newPostPanel.append(newPostPanelHeading);
+    newPostPanel.append(newPostPanelBody);
     newPostPanel.data("post", post);
     return newPostPanel;
   }
