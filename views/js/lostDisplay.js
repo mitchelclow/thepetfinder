@@ -48,7 +48,7 @@ $(document).ready(function() {
     newPostPanelBody.addClass("panel-body");
     newPostTitle.text(post.petName + " ");
     var formattedDate = new Date(post.createdAt);
-    formattedDate = moment(formattedDate).format("MMMM Do YYYY, h:mm:ss a");
+    // formattedDate = moment(formattedDate).format("MMMM Do YYYY, h:mm:ss a");
     newPostDate.text(formattedDate);
     var newAnimalType = $("<p>");
     newAnimalType.text("Animal Type: " + post.typeLost);
@@ -66,6 +66,8 @@ $(document).ready(function() {
     newLostEmail.text("Contact Email: " + post.emailLost);
     var newLostPhone = $("<p>");
     newLostPhone.text("Contact Phone: " + post.phoneLost);
+    var newLostPic = $("<p>");
+    newLostPic.image(post.photoLost);
 
     newPostTitle.append(newPostDate);
     newPostPanelHeading.append(newPostTitle);
@@ -77,6 +79,7 @@ $(document).ready(function() {
     newPostPanelBody.append(newLostName);
     newPostPanelBody.append(newLostEmail);
     newPostPanelBody.append(newLostPhone);
+    newPostPanelBody.append(newLostPic);
 
     newPostPanel.append(newPostPanelHeading);
     newPostPanel.append(newPostPanelBody);
