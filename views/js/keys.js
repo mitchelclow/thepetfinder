@@ -1,7 +1,7 @@
 var keys = {
 	"s3bucket": "thepetfinder",
-	"s3accesskey": "AKIAI7ERUAETCYYXFEQQ",
-	"s3secretaccesskey": "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",
+	"s3accesskey": "",
+	"s3secretaccesskey": "",
 };
 
 module.exports = keys;
