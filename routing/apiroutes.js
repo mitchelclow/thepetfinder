@@ -10,7 +10,7 @@
 module.exports = function(app, db) {
 
   // GET route for getting all of the posts from the lost table
-  app.get("/api/posts", function(req, res) {
+  app.get("/api/lostposts", function(req, res) {
     db.user_lost.findAll({})
     .then(function(dbPost) {
       res.json(dbPost);
@@ -18,7 +18,7 @@ module.exports = function(app, db) {
   });
 
  // GET route for getting all of the posts from the found table
-  app.get("/api/posts", function(req, res) {
+  app.get("/api/foundposts", function(req, res) {
     db.user_found.findAll({})
     .then(function(dbPost) {
       res.json(dbPost);
@@ -26,7 +26,7 @@ module.exports = function(app, db) {
   });
 
   // Get route for retrieving a single post from the lost table
-  app.get("/api/posts/:id", function(req, res) {
+  app.get("/api/lostposts/:id", function(req, res) {
     db.user_lost.findOne({
       where: {
         id: req.params.id
@@ -38,7 +38,7 @@ module.exports = function(app, db) {
   });
 
 // Get route for retrieving a single post from the found table
-  app.get("/api/posts/:id", function(req, res) {
+  app.get("/api/foundposts/:id", function(req, res) {
     db.user_found.findOne({
       where: {
         id: req.params.id

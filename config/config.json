@@ -9,7 +9,7 @@
   "test": {
     "username": "root",
     "password": "0live3932",
-    "database": "thepetfinder_db",
+    "database": "thepetfinder_db",  
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
