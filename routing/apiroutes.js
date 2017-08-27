@@ -9,7 +9,7 @@
 // =============================================================
 module.exports = function(app, db) {
 
-  // GET route for getting all of the posts
+  // GET route for getting all of the posts from the lost table
   app.get("/api/posts", function(req, res) {
     db.user_lost.findAll({})
     .then(function(dbPost) {
@@ -17,7 +17,15 @@ module.exports = function(app, db) {
     });
   });
 
-  // Get rotue for retrieving a single post
+ // GET route for getting all of the posts from the found table
+  app.get("/api/posts", function(req, res) {
+    db.user_found.findAll({})
+    .then(function(dbPost) {
+      res.json(dbPost);
+    });
+  });
+
+  // Get route for retrieving a single post from the lost table
   app.get("/api/posts/:id", function(req, res) {
     db.user_lost.findOne({
       where: {
@@ -29,8 +37,20 @@ module.exports = function(app, db) {
     });
   });
 
+// Get route for retrieving a single post from the found table
+  app.get("/api/posts/:id", function(req, res) {
+    db.user_found.findOne({
+      where: {
+        id: req.params.id
+      }
+    })
+    .then(function(dbPost) {
+      res.json(dbPost);
+    });
+  });
+
   // POST route for saving a new post to lost file
-  app.post("/api/posts", function(req, res) {
+  app.post("/api/lostposts", function(req, res) {
     console.log(req.body);
     db.user_lost.create(
       req.body
@@ -42,21 +62,13 @@ module.exports = function(app, db) {
 
 
 // POST route for saving a new post to found file
-app.post("/api/posts", function(req, res) {
+app.post("/api/foundposts", function(req, res) {
   console.log(req.body);
-  db.user_found.create({
-    // req.body
-    nameFound: req.body.nameFound,
-    emailFound: req.body.emailFound,
-    phoneFound: req.body.phoneFound,
-    addressFound: req.body.addressFound,
-    typeFound: req.body.typeFound,
-    dateFound: req.body.dateFound,
-    genderFound: req.body.genderFound,
-    commentFound: req.body.commentFound
-  })
+  db.user_found.create(
+    req.body
+    )
   .then(function(dbPost) {
-    res.json(dbPost);
+    res.redirect('../foundDisplay.html');
   });
 });
 };

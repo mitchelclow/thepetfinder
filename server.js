@@ -6,9 +6,9 @@ var path = require('path');
 var sequelize = require('sequelize');
 
 // for file uploads
-var fileUpload = require('express-fileupload');
-var s3 = require('s3');
-var keys = require('./views/js/keys.js');
+// var fileUpload = require('express-fileupload');
+// var s3 = require('s3');
+// var keys = require('./views/js/keys.js');
 
 var db = require('./models');
 var app = express();
