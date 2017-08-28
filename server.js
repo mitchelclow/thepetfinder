@@ -27,7 +27,6 @@ var client = s3.createClient({
 	multipartUploadThreshold: 20971520, // this is the default (20 MB)
 	multipartUploadSize: 15728640, // this is the default (15 MB)
 	s3Options: {
-		s3bucket: "thepetfinderav",
 		accessKeyId: keys.s3accesskey,
 		secretAccessKey: keys.s3secretaccesskey,
 // 		// any other options are passed to new AWS.S3()
@@ -44,7 +43,6 @@ app.get('/', function(req, res) {
 
 // placeholder for getting the file from ilost.html
 
-// posting the file to the /uploads folder
 app.post('/upload', function(req, res) {
 	if (!req.files) {
 		return res.status(400).send('No files were uploaded.');
