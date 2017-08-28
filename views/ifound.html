@@ -36,8 +36,8 @@
         <div class="panel panel-default">
           <div class="panel-heading">I found a pet</div>
           <div class="panel-body">
-            <form action="./api/foundposts" method="POST" class="form-horizontal found-form">
-
+            <!-- form one of two. It goes to MySQL db -->
+            <form id="found_form" action="./api/foundposts" method="POST" class="form-horizontal found-form">
               <div class="form-group row">
                 <label class="control-label col-sm-2" for="userName">Your Name:</label>
                 <div class="col-sm-10">
@@ -98,21 +98,31 @@
                   <textarea name="commentFound" class="form-control" rows="3" id="commentFound"></textarea>
                 </div>
               </div>
-
-              <div class="form-group row">
-                <label class="control-label col-sm-2" for="photoFound">Photo URL:</label>
-                <div class="col-sm-10">
-                  <input name="photoFound" type="file" class="form-control-file" id="photoFound" placeholder="URL">
-                </div>
-              </div>
-
-              <div class="form-group row">
-                <div class="col-sm-offset-2 col-sm-10">
-                  <button type="submit" class="btn btn-default">Submit</button>
-                </div>
-              </div>
             </form>
+
+          <!-- form two of two. It goes to S3 and image moves to /uploads -->
+          <form ref="uploadForm" action="/upload" method="post" class="form-horizontal found-form" enctyp="multipart/form-data">
+            <div class="form-group row">
+              <label class="control-label col-sm-2" for="photoFound">Photo:</label>
+              <div class="col-sm-10">
+                <input type="file" name="photoFound"/>
+                <br>
+                <input type="submit" value="Upload photo"/>
+              </div>
+            </div>
+          </form>
+
+          <!-- additional row for spacing -->
+          <div class="form-group row">
           </div>
+
+          <!-- associating the submit buttom with form one -->
+          <div class="form-group row">
+            <div class="col-sm-offset-2 col-sm-10">
+              <input form="found_form" name="submitForm" type="submit" value="Submit" class="btn btn-default"/>
+            </div>
+          </div>
+
           <!-- close panel body -->
         </div>
         <!--close panel  -->
