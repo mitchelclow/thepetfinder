@@ -43,6 +43,7 @@ $(document).ready(function() {
       float: "right",
       "font-weight": "400",
       "font-size": "15px"
+      "margin" "100px;"
     });
     var newPostPanelBody = $("<div>");
     newPostPanelBody.addClass("panel-body");
