@@ -75,6 +75,9 @@ $(document).ready(function() {
     var newFoundPhone = $("<p>");
       newFoundPhone.text("Contact Phone: " + post.phoneFound);
 
+    // var newFoundPic = $("<p>");
+    // newLostPic.image(post.photoFound);
+
     newPostTitle.append(newPostDate);
     newPostPanelHeading.append(newPostTitle);
     newPostPanelBody.append(newFoundAddress);
@@ -84,6 +87,7 @@ $(document).ready(function() {
     newPostPanelBody.append(newFoundName);
     newPostPanelBody.append(newFoundEmail);
     newPostPanelBody.append(newFoundPhone);
+    // newPostPanelBody.append(newLostPic);
 
     newPostPanel.append(newPostPanelHeading);
     newPostPanel.append(newPostPanelBody);

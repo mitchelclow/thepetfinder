@@ -117,21 +117,19 @@ app.post("/api/foundposts", function(req, res) {
     req.body
     )
   .then(function(dbPost) {
-    // res.redirect('../foundDisplay.html');
+
     if (!req.files) {
-  		return res.status(400).send('No files were uploaded.');
+  		// return res.redirect('../foundDisplay.html');
+			res.status(400).send('No files were uploaded.');
   	}
+			var photoFound = req.files.photoFound;
 
-  	var photoFound = req.files.photoFound;
-
-  	// Use the mv() method to place the file somewhere on your server
-  	photoFound.mv('uploads/' + req.files.photoFound.name, function(err) {
-  		if (err) {
-  			return res.status(500).send(err);
-  		}
-  	// Upload to S3
-
-
+	  	// Use the mv() method to place the file somewhere on your server
+	  	photoFound.mv('uploads/' + req.files.photoFound.name, function(err) {
+	  		if (err) {
+	  			return res.status(500).send(err);
+	  		}
+  		// Upload to S3
   		var params = {
   			localFile: 'uploads/' + req.files.photoFound.name,
 
@@ -149,7 +147,7 @@ app.post("/api/foundposts", function(req, res) {
   			console.log("done uploading");
   			res.redirect('../foundDisplay.html');
   		});
-  	});
+		});
 
   });
 });

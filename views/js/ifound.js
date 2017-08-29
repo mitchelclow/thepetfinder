@@ -25,7 +25,7 @@ $(document).ready(function() {
   // Adding an event listener for when the form is submitted
   $(foundForm).on("submit", function handleFormSubmit(event) {
     event.preventDefault();
-    // Wont submit the post if we are missing a body or a title
+    // Won't submit the post if we are missing a body or a title
     if (!userName.val().trim() || !emailFound.val().trim() || !phoneFound.val().trim()) {
       return;
     }

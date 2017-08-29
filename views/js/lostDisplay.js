@@ -88,7 +88,7 @@ $(document).ready(function() {
     return newPostPanel;
   }
 
-  // This function displays a messgae when there are no posts
+  // This function displays a message when there are no posts
   function displayEmpty() {
     lostContainer.empty();
     var messageh2 = $("<h2>");
