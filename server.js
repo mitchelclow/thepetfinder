@@ -1,15 +1,13 @@
 // Requiring npm packages
 var express = require('express');
 var bodyParser = require('body-parser');
-var inquirer = require('inquirer');
 var path = require('path');
 var sequelize = require('sequelize');
 var moment = require('moment');
 
 // for file uploads
 var fileUpload = require('express-fileupload');
-var s3 = require('s3')
-var keys = require("./keys.js");
+
 
 var db = require('./models');
 var app = express();
@@ -20,20 +18,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 app.use(express.static('./views'));
-
-var client = s3.createClient({
-	maxAsyncS3: 20, // this is the default
-	s3RetryCount: 3, // this is the default
-	s3RetryDelay: 1000, // this is the default
-	multipartUploadThreshold: 20971520, // this is the default (20 MB)
-	multipartUploadSize: 15728640, // this is the default (15 MB)
-	s3Options: {
-		accessKeyId: keys.s3accesskey,
-		secretAccessKey: keys.s3secretaccesskey,
-// 		// any other options are passed to new AWS.S3()
-// 		// See: http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Config.html#constructor-property
-	},
-});
 
 app.use(fileUpload());
 // handling the upload

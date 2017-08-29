@@ -6,10 +6,10 @@ $(document).ready(function() {
 
   // This function grabs posts from the database and updates the view
   function getPosts() {
-    $.get("/api/thepetfinder", function(data) {
+    $.get("/api/foundposts", function(data) {
       console.log("Posts", data);
-      posts = data;
-      if (!posts || !posts.length) {
+    foundposts = data.reverse();
+      if (!foundposts || !foundposts.length) {
         displayEmpty();
       }
       else {
@@ -25,8 +25,8 @@ $(document).ready(function() {
   function initializeRows() {
     foundContainer.empty();
     var postsToAdd = [];
-    for (var i = 0; i < posts.length; i++) {
-      postsToAdd.push(createNewRow(posts[i]));
+    for (var i = 0; i < foundposts.length; i++) {
+      postsToAdd.push(createNewRow(foundposts[i]));
     }
     foundContainer.append(postsToAdd);
   }
@@ -47,7 +47,7 @@ $(document).ready(function() {
     });
     var newPostPanelBody = $("<div>");
     newPostPanelBody.addClass("panel-body");
-    newPostTitle.text("Lost " + post.typeofAnimal);
+    newPostTitle.text("Lost " + post.typeFound);
     var formattedDate = new Date(post.createdAt);
     formattedDate = moment(formattedDate).format("MMMM Do YYYY, h:mm:ss a");
     newPostDate.text(formattedDate);
@@ -58,11 +58,11 @@ $(document).ready(function() {
     var newFoundGender = $("<p>");
     newFoundGender.text("Gender: " + post.genderFound);
     var newFoundComment = $("<p>");
-    newFoundComment.text("Additonal Info: " + post.addlInfofound);
+    newFoundComment.text("Additonal Info: " + post.commentFound);
     var newFoundName = $("<p>");
-    newFoundName.text("Contact Name: " + post.foundName);
+    newFoundName.text("Contact Name: " + post.nameFound);
     var newFoundEmail = $("<p>");
-    newFoundEmail.text("Contact Email: " + post.emailfound);
+    newFoundEmail.text("Contact Email: " + post.emailFound);
     var newFoundPhone = $("<p>");
     newFoundPhone.text("Contact Phone: " + post.phoneFound);
 
@@ -76,8 +76,8 @@ $(document).ready(function() {
     newPostPanelBody.append(newFoundEmail);
     newPostPanelBody.append(newFoundPhone);
 
-    newPostPanel.prepend(newPostPanelHeading);
-    newPostPanel.prepend(newPostPanelBody);
+    newPostPanel.append(newPostPanelHeading);
+    newPostPanel.append(newPostPanelBody);
     newPostPanel.data("post", post);
     return newPostPanel;
   }
