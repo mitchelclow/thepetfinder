@@ -31,14 +31,14 @@ $(document).ready(function() {
     }
     // Constructing a newPost object to hand to the database
     var newPost = {
-      namelost: userName.val().trim(),
-      emailfound: emailFound.val().trim(),
+      nameFound: userName.val().trim(),
+      emailFound: emailFound.val().trim(),
       phoneFound: phoneFound.val().trim(),
       addressFound: addressFound.val().trim(),
-      typeofAnimal: typeFound.val().trim(),
+      typeFound: typeFound.val().trim(),
       dateFound: dateFound.val().trim(),
       genderFound: genderFound.val().trim(),
-      addlInfofound: commentFound.val().trim()
+      commentFound: commentFound.val().trim()
     };
 
     console.log(newPost);
