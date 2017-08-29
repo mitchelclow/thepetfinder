@@ -2,7 +2,7 @@ $(document).ready(function() {
   /* global moment */
   // lostContainer holds all of our posts
   var lostContainer = $(".lost-container");
-  var posts;
+  var lostposts;
 
   // This function grabs posts from the database and updates the view
   function getPosts() {

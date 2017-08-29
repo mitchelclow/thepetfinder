@@ -2,7 +2,7 @@ $(document).ready(function() {
   /* global moment */
   // foundContainer holds all of our posts
   var foundContainer = $(".found-container");
-  var posts;
+  var foundposts;
 
   // This function grabs posts from the database and updates the view
   function getPosts() {
@@ -45,26 +45,35 @@ $(document).ready(function() {
       "margin-top":
       "-15px"
     });
+
     var newPostPanelBody = $("<div>");
-    newPostPanelBody.addClass("panel-body");
-    newPostTitle.text("Lost " + post.typeFound);
+      newPostPanelBody.addClass("panel-body");
+      newPostTitle.text("Lost " + post.typeFound);
+
     var formattedDate = new Date(post.createdAt);
-    formattedDate = moment(formattedDate).format("MMMM Do YYYY, h:mm:ss a");
-    newPostDate.text(formattedDate);
+      formattedDate = moment(formattedDate).format("MMMM Do YYYY, h:mm:ss a");
+      newPostDate.text(formattedDate);
+
     var newFoundAddress = $("<p>");
-    newFoundAddress.text("Address Last Seen: " + post.addressFound);
+      newFoundAddress.text("Address Last Seen: " + post.addressFound);
+
     var newFoundDate = $("<p>");
-    newFoundDate.text("Date Lost: " + post.dateFound);
+      newFoundDate.text("Date Lost: " + post.dateFound);
+
     var newFoundGender = $("<p>");
-    newFoundGender.text("Gender: " + post.genderFound);
+      newFoundGender.text("Gender: " + post.genderFound);
+
     var newFoundComment = $("<p>");
-    newFoundComment.text("Additonal Info: " + post.commentFound);
+      newFoundComment.text("Additonal Info: " + post.commentFound);
+
     var newFoundName = $("<p>");
-    newFoundName.text("Contact Name: " + post.nameFound);
+      newFoundName.text("Contact Name: " + post.nameFound);
+
     var newFoundEmail = $("<p>");
-    newFoundEmail.text("Contact Email: " + post.emailFound);
+      newFoundEmail.text("Contact Email: " + post.emailFound);
+
     var newFoundPhone = $("<p>");
-    newFoundPhone.text("Contact Phone: " + post.phoneFound);
+      newFoundPhone.text("Contact Phone: " + post.phoneFound);
 
     newPostTitle.append(newPostDate);
     newPostPanelHeading.append(newPostTitle);
@@ -82,7 +91,7 @@ $(document).ready(function() {
     return newPostPanel;
   }
 
-  // This function displays a messgae when there are no posts
+  // This function displays a message when there are no posts
   function displayEmpty() {
     foundContainer.empty();
     var messageh2 = $("<h2>");
