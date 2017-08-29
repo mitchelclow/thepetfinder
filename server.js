@@ -49,15 +49,15 @@ app.post('/upload', function(req, res) {
 });
 
 //When working on local machine, uncomment this and comment the stuff below
-// db.sequelize.sync().then(function(){
-//   require('./routing/apiroutes.js')(app, db);
-//   app.listen(port, function(){
-//     console.log("Server listening on " + port);
-//   });
-// });
+db.sequelize.sync().then(function(){
+  require('./routing/apiroutes.js')(app, db);
+  app.listen(port, function(){
+    console.log("Server listening on " + port);
+  });
+});
 
 //When deploying to heroku.  Until we get mysql working, comment above and uncomment below
 
-app.listen(port, function(){
-  console.log("Server listening on " + port);
-});
+// app.listen(port, function(){
+//   console.log("Server listening on " + port);
+// });
