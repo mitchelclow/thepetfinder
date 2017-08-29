@@ -17,5 +17,13 @@
     "sequelize": "^4.7.2",
     "express-fileupload": "^0.1.4",
     "s3": "^4.4.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mitchelclow/thepetfinder.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mitchelclow/thepetfinder/issues"
+  },
+  "homepage": "https://github.com/mitchelclow/thepetfinder#readme"
 }
