@@ -4,6 +4,7 @@ var bodyParser = require('body-parser');
 var inquirer = require('inquirer');
 var path = require('path');
 var sequelize = require('sequelize');
+var moment = require('moment');
 
 // for file uploads
 var fileUpload = require('express-fileupload');

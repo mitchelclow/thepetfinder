@@ -6,10 +6,10 @@ $(document).ready(function() {
 
   // This function grabs posts from the database and updates the view
   function getPosts() {
-    $.get("./api/posts", function(data) {
+    $.get("./api/lostposts", function(data) {
       console.log("Posts", data);
-      posts = data.reverse();
-      if (!posts || !posts.length) {
+      lostposts = data.reverse();
+      if (!lostposts || !lostposts.length) {
         displayEmpty();
       }
       else {
@@ -25,8 +25,8 @@ $(document).ready(function() {
   function initializeRows() {
     lostContainer.empty();
     var postsToAdd = [];
-    for (var i = 0; i < posts.length; i++) {
-      postsToAdd.push(createNewRow(posts[i]));
+    for (var i = 0; i < lostposts.length; i++) {
+      postsToAdd.push(createNewRow(lostposts[i]));
     }
     lostContainer.append(postsToAdd);
   }
@@ -48,7 +48,7 @@ $(document).ready(function() {
     newPostPanelBody.addClass("panel-body");
     newPostTitle.text(post.petName + " ");
     var formattedDate = new Date(post.createdAt);
-    // formattedDate = moment(formattedDate).format("MMMM Do YYYY, h:mm:ss a");
+    formattedDate = moment(formattedDate).format("MMMM Do YYYY, h:mm:ss a");
     newPostDate.text(formattedDate);
     var newAnimalType = $("<p>");
     newAnimalType.text("Animal Type: " + post.typeLost);
