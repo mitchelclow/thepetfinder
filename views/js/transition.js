@@ -1,5 +1,5 @@
 var currentColor = 0;
-var colors = ["images/bird.jpg", "images/lassie.jpg", "images/background.png"];
+var colors = ["images/bird.jpg", "images/lassie.jpg",  "images/orangecat.jpg", "images/background.png"];
 
 setInterval(changeBG, 3500);
 
