@@ -41,15 +41,9 @@ $(document).ready(function() {
     var newPostDate = $("<small>");
     newPostDate.css({
       float: "right",
-<<<<<<< HEAD
       "font-weight": "700",
       "margin-top":
       "-15px"
-=======
-      "font-weight": "400",
-      "font-size": "15px",
-      "margin": "100px;"
->>>>>>> 5cb1e349ca70eca55547a6c3bfdb0a1230470403
     });
     var newPostPanelBody = $("<div>");
     newPostPanelBody.addClass("panel-body");
