@@ -87,10 +87,14 @@ section button:hover {
 
 ul {
     list-style-type: none;
-    margin-bottom: 125px;
+    margin-bottom: 0;
     padding: 0;
     overflow: hidden;
     background-color: black;
+}
+
+.setMarginNav {
+	margin-bottom: 125px;
 }
 
 li {
