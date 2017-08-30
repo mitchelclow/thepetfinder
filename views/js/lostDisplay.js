@@ -41,30 +41,39 @@ $(document).ready(function() {
     var newPostDate = $("<small>");
     newPostDate.css({
       float: "right",
-      "font-weight": "400",
-      "font-size": "15px"
-      "margin" "100px;"
+      "font-weight": "700",
+      "margin-top":
+      "-15px"
     });
     var newPostPanelBody = $("<div>");
     newPostPanelBody.addClass("panel-body");
     newPostTitle.text(post.petName + " ");
+
     var formattedDate = new Date(post.createdAt);
     formattedDate = moment(formattedDate).format("MMMM Do YYYY, h:mm:ss a");
     newPostDate.text(formattedDate);
+
     var newAnimalType = $("<p>");
     newAnimalType.text("Animal Type: " + post.typeLost);
+
     var newLostAddress = $("<p>");
     newLostAddress.text("Address Last Seen: " + post.addressLost);
+
     var newLostDate = $("<p>");
     newLostDate.text("Date Lost: " + post.dateLost);
+
     var newLostGender = $("<p>");
     newLostGender.text("Gender: " + post.genderLost);
+
     var newLostComment = $("<p>");
     newLostComment.text("Additonal Info: " + post.commentLost);
+
     var newLostName = $("<p>");
     newLostName.text("Contact Name: " + post.nameLost);
+
     var newLostEmail = $("<p>");
     newLostEmail.text("Contact Email: " + post.emailLost);
+
     var newLostPhone = $("<p>");
     newLostPhone.text("Contact Phone: " + post.phoneLost);
     // var newLostPic = $("<p>");

@@ -47,33 +47,33 @@ $(document).ready(function() {
     });
 
     var newPostPanelBody = $("<div>");
-      newPostPanelBody.addClass("panel-body");
-      newPostTitle.text("Lost " + post.typeFound);
+    newPostPanelBody.addClass("panel-body");
+    newPostTitle.text("Lost " + post.typeFound);
 
     var formattedDate = new Date(post.createdAt);
-      formattedDate = moment(formattedDate).format("MMMM Do YYYY, h:mm:ss a");
-      newPostDate.text(formattedDate);
+    formattedDate = moment(formattedDate).format("MMMM Do YYYY, h:mm:ss a");
+    newPostDate.text(formattedDate);
 
     var newFoundAddress = $("<p>");
-      newFoundAddress.text("Address Last Seen: " + post.addressFound);
+    newFoundAddress.text("Address Last Seen: " + post.addressFound);
 
     var newFoundDate = $("<p>");
-      newFoundDate.text("Date Lost: " + post.dateFound);
+    newFoundDate.text("Date Lost: " + post.dateFound);
 
     var newFoundGender = $("<p>");
-      newFoundGender.text("Gender: " + post.genderFound);
+    newFoundGender.text("Gender: " + post.genderFound);
 
     var newFoundComment = $("<p>");
-      newFoundComment.text("Additonal Info: " + post.commentFound);
+    newFoundComment.text("Additonal Info: " + post.commentFound);
 
     var newFoundName = $("<p>");
-      newFoundName.text("Contact Name: " + post.nameFound);
+    newFoundName.text("Contact Name: " + post.nameFound);
 
     var newFoundEmail = $("<p>");
-      newFoundEmail.text("Contact Email: " + post.emailFound);
+    newFoundEmail.text("Contact Email: " + post.emailFound);
 
     var newFoundPhone = $("<p>");
-      newFoundPhone.text("Contact Phone: " + post.phoneFound);
+    newFoundPhone.text("Contact Phone: " + post.phoneFound);
 
     // var newFoundPic = $("<p>");
     // newLostPic.image(post.photoFound);
