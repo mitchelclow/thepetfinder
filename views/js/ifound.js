@@ -22,10 +22,11 @@ $(document).ready(function() {
   var dateFound = $("#dateFound");
   var genderFound = $("#genderFound");
   var commentFound = $("#commentFound");
+  var photoFound = $("#photoFound")
   // Adding an event listener for when the form is submitted
   $(foundForm).on("submit", function handleFormSubmit(event) {
     event.preventDefault();
-    // Wont submit the post if we are missing a body or a title
+    // Won't submit the post if we are missing a body or a title
     if (!userName.val().trim() || !emailFound.val().trim() || !phoneFound.val().trim()) {
       return;
     }
@@ -38,7 +39,8 @@ $(document).ready(function() {
       typeFound: typeFound.val().trim(),
       dateFound: dateFound.val().trim(),
       genderFound: genderFound.val().trim(),
-      commentFound: commentFound.val().trim()
+      commentFound: commentFound.val().trim(),
+      photoFound: photoFound.val().trim()
     };
 
     console.log(newPost);

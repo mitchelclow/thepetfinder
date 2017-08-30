@@ -42,8 +42,8 @@ $(document).ready(function() {
     newPostDate.css({
       float: "right",
       "font-weight": "400",
-      "font-size": "15px"
-      "margin" "100px;"
+      "font-size": "15px",
+      "margin": "100px;"
     });
     var newPostPanelBody = $("<div>");
     newPostPanelBody.addClass("panel-body");
@@ -67,8 +67,8 @@ $(document).ready(function() {
     newLostEmail.text("Contact Email: " + post.emailLost);
     var newLostPhone = $("<p>");
     newLostPhone.text("Contact Phone: " + post.phoneLost);
-    // var newLostPic = $("<p>");
-    // newLostPic.image(post.photoLost);
+    // var newLostPhoto = $("<div>");
+    // newLostPhoto.blob(post.photoLost);
 
     newPostTitle.append(newPostDate);
     newPostPanelHeading.append(newPostTitle);
@@ -80,7 +80,7 @@ $(document).ready(function() {
     newPostPanelBody.append(newLostName);
     newPostPanelBody.append(newLostEmail);
     newPostPanelBody.append(newLostPhone);
-    // newPostPanelBody.append(newLostPic);
+    // newPostPanelBody.append(newLostPhoto);
 
     newPostPanel.append(newPostPanelHeading);
     newPostPanel.append(newPostPanelBody);
@@ -88,7 +88,7 @@ $(document).ready(function() {
     return newPostPanel;
   }
 
-  // This function displays a messgae when there are no posts
+  // This function displays a message when there are no posts
   function displayEmpty() {
     lostContainer.empty();
     var messageh2 = $("<h2>");
