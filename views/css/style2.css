@@ -87,7 +87,7 @@ section button:hover {
 
 ul {
     list-style-type: none;
-    margin: 0;
+    margin-bottom: 125px;
     padding: 0;
     overflow: hidden;
     background-color: black;
