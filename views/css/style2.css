@@ -21,6 +21,10 @@ background-size: ;
   font-size: 25px;
 }
 
+.orangeHead {
+  color: orange;
+}
+
 
 body {
   min-height: 100%;
