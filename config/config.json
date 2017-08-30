@@ -1,21 +1,33 @@
 {
   "development": {
     "username": "root",
+<<<<<<< HEAD
     "password": "Canondale^31",
+=======
+    "password": "0live3932",
+>>>>>>> 6c7a462e389b5c8968fb49d4ceb8d5ee2e3bf06e
     "database": "thepetfinder_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
+<<<<<<< HEAD
     "password": "Canondale^31",
+=======
+    "password": "0live2",
+>>>>>>> 6c7a462e389b5c8968fb49d4ceb8d5ee2e3bf06e
     "database": "thepetfinder_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
     "username": "root",
+<<<<<<< HEAD
     "password": "Canondale^31",
+=======
+    "password": "0live3932",
+>>>>>>> 6c7a462e389b5c8968fb49d4ceb8d5ee2e3bf06e
     "database": "thepetfinder_db",
     "host": "127.0.0.1",
     "dialect": "mysql"

@@ -50,11 +50,15 @@ var UserFound = sequelize.define("user_found", {
       }
   },
   commentFound: {
-    type: DataTypes.STRING
+    type: DataTypes.STRING,
   },
   photoFound: {
-    type: DataTypes.BLOB
+    type: DataTypes.STRING,
+    isURL: true,
   }
+  // photoFound: {
+  //   type: DataTypes.BLOB
+  // }
 });
 
 return UserFound;
