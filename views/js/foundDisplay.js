@@ -42,8 +42,7 @@ $(document).ready(function() {
     newPostDate.css({
       float: "right",
       "font-weight": "700",
-      "margin-top":
-      "-15px"
+      "margin-top": "-15px"
     });
 
     var newPostPanelBody = $("<div>");
