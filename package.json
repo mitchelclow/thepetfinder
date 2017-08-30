@@ -12,11 +12,13 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.17.2",
+    "chai": "^4.1.1",
+    "chia": "0.0.1",
     "express": "^4.15.4",
-    "mysql2": "^1.4.1",
-    "sequelize": "^4.7.2",
     "express-fileupload": "^0.1.4",
-    "s3": "^4.4.0"
+    "mysql2": "^1.4.1",
+    "s3": "^4.4.0",
+    "sequelize": "^4.7.2"
   },
   "repository": {
     "type": "git",
