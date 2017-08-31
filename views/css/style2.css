@@ -93,8 +93,12 @@ ul {
     background-color: black;
 }
 
-.setMarginNav {
+/*.setMarginNav {
 	margin-bottom: 125px;
+}*/
+
+.resHead.found-lost-pets-index-title {
+  text-align: left;
 }
 
 li {
@@ -233,6 +237,10 @@ padding: 3px 5px 0 15px;
 		margin-left: 115px;
 	}
 }*/
+
+.found-pet-panel {
+
+}
 
 .navText
 {
