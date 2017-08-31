@@ -1,23 +1,23 @@
 {
   "development": {
-    "username": "root",
-    "password": "Canondale^31",
-    "database": "thepetfinder_db",
-    "host": "127.0.0.1",
+    "username": "masteruser",
+    "password": "masteruser",
+    "database": "petfinder",
+    "host": "petfinder.c1ggqiqilqo2.us-east-2.rds.amazonaws.com",
     "dialect": "mysql"
   },
   "test": {
-    "username": "root",
-    "password": "Canondale^31",
-    "database": "thepetfinder_db",
-    "host": "127.0.0.1",
+    "username": "masteruser",
+    "password": "masteruser",
+    "database": "petfinder",
+    "host": "petfinder.c1ggqiqilqo2.us-east-2.rds.amazonaws.com",
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": "Canondale^31",
-    "database": "thepetfinder_db",
-    "host": "127.0.0.1",
+    "username": "masteruser",
+    "password": "masteruser",
+    "database": "petfinder",
+    "host": "petfinder.c1ggqiqilqo2.us-east-2.rds.amazonaws.com",
     "dialect": "mysql"
   }
 }
