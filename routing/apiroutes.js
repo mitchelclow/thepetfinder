@@ -67,14 +67,12 @@ module.exports = function(app, db) {
 
   // POST route for saving a new post to lost file
   app.post("/api/lostposts", function(req, res) {
-    console.log(req.body);
     db.user_lost.create(
       req.body
     )
     .then(function(dbPost) {
-      // res.redirect('../lostDisplay.html');
-			if (!req.files) {
-	  		return res.status(400).send('No files were uploaded.');
+			if (objectHasNoKeys(req.files)) {
+				return res.redirect('../lostDisplay.html');
 	  	}
 
 	  	var photoLost = req.files.photoLost;
@@ -108,6 +106,14 @@ module.exports = function(app, db) {
 
     });
   });
+
+function objectHasNoKeys(theObject) {
+	var keys = Object.keys(theObject);
+	if (keys.length <= 0) {
+		return true
+	}
+	return false;
+}
 
 
 // POST route for saving a new post to found file
