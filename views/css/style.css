@@ -1,25 +1,26 @@
 body
 {
-background-image: url("../images/background.png");
+background-image: url("../images/catdog.jpg");
 background-size: cover;
-transition: 3s;
 }
 
 .resHead
 {
 	text-align: center;
   font-family: 'Montserrat', sans-serif;
-  color: black!important;
+  color: white!important;
   font-size: 75px;
-  text-shadow: 1px 1px orange;
+  font-weight: 550;
+  text-shadow: 3px 3px #919191;
 }
 
 .resText
 {
 	text-align: center;
   font-family: 'Montserrat', sans-serif;
-  color: black!important;
+  color: white!important;
   font-size: 25px;
+  text-shadow: 1px 1px #919191;
 }
 
 .navText
