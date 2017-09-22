@@ -11,7 +11,7 @@ background-size: cover;
   color: white!important;
   font-size: 75px;
   font-weight: 550;
-  text-shadow: 3px 3px #919191;
+  text-shadow: 1px 1px orange;
 }
 
 .resText
@@ -106,7 +106,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: black;
+    background-color: #323335;
 }
 
 li {
@@ -190,5 +190,5 @@ a {
 .buttonPosition
 {
   text-align: center;
-  margin-top: 400px;
+  margin-top: 550px;
 }
