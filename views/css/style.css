@@ -63,7 +63,7 @@ body {
   font-size: 2.0rem;
   padding: 1.25rem 2.5rem;
   border: 1px solid transparent;
-  background-color: #333;
+  background-color: #d34e00;
   margin: 3px;
   color: white;
   text-decoration: none;
@@ -193,7 +193,7 @@ a {
   text-align: center;
   // margin-top: 550px;
   position: absolute;
-  bottom: 10%;
+  bottom: 5%;
   right: 39%;
 }
 
