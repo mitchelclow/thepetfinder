@@ -191,7 +191,10 @@ a {
 .buttonPosition
 {
   text-align: center;
-  margin-top: 550px;
+  // margin-top: 550px;
+  position: absolute;
+  bottom: 10%;
+  right: 39%;
 }
 
 span1 {
