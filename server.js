@@ -1,17 +1,16 @@
 // Requiring npm packages
 var express = require('express');
+var db = require('./models');
 var bodyParser = require('body-parser');
 var path = require('path');
 var sequelize = require('sequelize');
 var moment = require('moment');
-
-// for file uploads
 var fileUpload = require('express-fileupload');
 
 
-var db = require('./models');
-var app = express();
 var port = process.env.PORT || 3000;
+var app = express();
+
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -32,16 +31,13 @@ app.post('/upload', function(req, res) {
 
 });
 
-//When working on local machine, uncomment this and comment the stuff below
+// Development
+// The sequelize property on db is the connection to the db
+// The sync method that creates tables from the models
 db.sequelize.sync().then(function(){
   require('./routing/apiroutes.js')(app, db);
+ // After synching, the express server starts
   app.listen(port, function(){
     console.log("Server listening on " + port);
   });
 });
-
-//When deploying to heroku.  Until we get mysql working, comment above and uncomment below
-
-// app.listen(port, function(){
-//   console.log("Server listening on " + port);
-// });

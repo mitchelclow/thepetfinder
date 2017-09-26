@@ -1,6 +1,9 @@
 // index.js runs this JavaScript file through Sequelize and exports an object used to interface with Sequelize in other files
+// index.js provides vars sequelize and DataTypes
+// sequelize is the connection to the db; DataTypes deine what tyhpe of data each propery on our model should be
+// Using sequelize.define method and passing to arguments: the name of the modelas a string, and an object with model's schema
 module.exports = function(sequelize, DataTypes){
-var UserFound = sequelize.define("user_found", {
+var UserFound = sequelize.define("UserFound", {
   nameFound: {
     type: DataTypes.STRING,
     allowNull: false,
@@ -12,15 +15,12 @@ var UserFound = sequelize.define("user_found", {
     type: DataTypes.STRING,
     allowNull: false,
       validate: {
+        isEmail: true,
         len: [1]
       }
   },
   phoneFound: {
     type: DataTypes.STRING,
-    allowNull: false,
-      validate: {
-        len: [1]
-      }
   },
   addressFound: {
     type: DataTypes.STRING,
@@ -45,21 +45,13 @@ var UserFound = sequelize.define("user_found", {
   },
   genderFound: {
     type: DataTypes.STRING,
-    allowNull: false,
-      validate: {
-        len: [1]
-      }
   },
   commentFound: {
     type: DataTypes.STRING,
+  },
+  photoFound: {
+    type: DataTypes.BLOB,
   }
-  // photoFound: {
-  //   type: DataTypes.STRING,
-  //   isURL: true,
-  // }
-  // photoFound: {
-  //   type: DataTypes.BLOB
-  // }
 });
 
 return UserFound;
