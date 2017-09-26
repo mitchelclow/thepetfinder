@@ -1,14 +1,8 @@
+/*development: Running locally; production: Deploying to heroku*/
 {
   "development": {
-    "username": "masteruser",
-    "password": "masteruser",
-    "database": "petfinder",
-    "host": "petfinder.c1ggqiqilqo2.us-east-2.rds.amazonaws.com",
-    "dialect": "mysql"
-  },
-  "test": {
-    "username": "masteruser",
-    "password": "masteruser",
+    "username": "root",
+    "password": "password",
     "database": "petfinder",
     "host": "petfinder.c1ggqiqilqo2.us-east-2.rds.amazonaws.com",
     "dialect": "mysql"

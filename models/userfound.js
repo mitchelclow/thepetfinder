@@ -1,3 +1,4 @@
+// index.js runs this JavaScript file through Sequelize and exports an object used to interface with Sequelize in other files
 module.exports = function(sequelize, DataTypes){
 var UserFound = sequelize.define("user_found", {
   nameFound: {
