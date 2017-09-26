@@ -45,7 +45,7 @@ body {
 }
 
 .container {
-  width: 80%;
+  width: 75%;
   margin: 0 auto;
 }
 
@@ -191,17 +191,20 @@ font-family: 'Montserrat', sans-serif; font-size: 20px;
 .dogPicture {
 
   margin-top: -680px;
-  padding-left: 83px;
+  margin-right: 1%;
+  margin-left: 1%;
 }
 
 .fido {
 	width: 100%;
+  image-align: center;
 }
 
 .aboutText {
   font-family: 'Montserrat', sans-serif; font-size: 160px;
-  text-align: center;
-  padding-left: 180px;
+  margin-left: 50%;
+  margin-right: 50%;
+
 }
 
 .aboutDescrip {
