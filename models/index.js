@@ -1,3 +1,4 @@
+// index.js is created after running 'sequelize init:config init:models'
 'use strict';
 
 var fs        = require('fs');
