@@ -13,6 +13,8 @@ background-size: cover;
   font-weight: 550;
   text-shadow: 1px 1px orange;
   padding-right: 20px;
+  margin-top: -55px;
+  margin-left: 15%;
 }
 
 .resText
@@ -293,4 +295,23 @@ p {
  
 .midnight {
   color: #2c3e50;
+}
+
+.dropdown-color {
+  color: white
+}
+
+.dropdown-item {
+
+}
+
+.dropdown {
+  margin-left: 2%;
+  display: inline-block;
+  float: left;
+}
+
+.res-head-margin-top {
+  margin-top: -21px;
+  display: inline-block;
 }
