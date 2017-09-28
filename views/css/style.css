@@ -2,6 +2,7 @@ body
 {
 background-image: url("../images/catdog.jpg");
 background-size: cover;
+z-index: 1;
 }
 
 .resHead
@@ -14,7 +15,6 @@ background-size: cover;
   text-shadow: 1px 1px orange;
   padding-right: 20px;
   margin-top: -55px;
-  margin-left: 15%;
 }
 
 .resText
@@ -309,9 +309,14 @@ p {
   margin-left: 2%;
   display: inline-block;
   float: left;
+  z-index: 2;
 }
 
 .res-head-margin-top {
-  margin-top: -21px;
+  margin-top: -14px;
   display: inline-block;
+}
+
+.pawLogo {
+  width: 6%;
 }
