@@ -307,6 +307,7 @@ p {
 
 .dropdown {
   margin-left: 2%;
+  margin-top: 2%;
   display: inline-block;
   float: left;
   z-index: 2;
