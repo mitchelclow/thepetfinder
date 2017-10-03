@@ -6,8 +6,8 @@ $(document).ready(function() {
 
   // This function grabs posts from the database and updates the view
   function getPosts() {
-    $.get("/api/foundposts", function(data) {
-      console.log("Posts", data);
+    $.get("/api/UserFound", function(data) {
+      console.log("s", data);
     foundposts = data.reverse();
       if (!foundposts || !foundposts.length) {
         displayEmpty();

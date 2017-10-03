@@ -202,8 +202,9 @@ font-family: 'Montserrat', sans-serif; font-size: 20px;
 
 .aboutText {
   font-family: 'Montserrat', sans-serif; font-size: 160px;
-  margin-left: 50%;
-  margin-right: 50%;
+  /*margin-left: 50%;
+  margin-right: 50%;*/
+	text-align: center;
 
 }
 
