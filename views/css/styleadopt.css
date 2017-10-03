@@ -196,15 +196,15 @@ font-family: 'Montserrat', sans-serif; font-size: 20px;
 	width: 100%;
 }
 
-.aboutText {
-  font-family: 'Montserrat', sans-serif; font-size: 160px;
+.adoptText {
+  font-family: 'Montserrat', sans-serif; font-size: 118px;
+  padding-right: 6%;
   text-align: center;
-  padding-left: 180px;
 }
 
 .aboutDescrip {
 font-family: 'Montserrat', sans-serif; font-size: 20px;
-padding: 3px 5px 0 15px;
+padding: 3px 10px 0 15px;
 }
 
 .faqContainer
