@@ -321,3 +321,19 @@ p {
 .pawLogo {
   width: 6%;
 }
+
+.glyph-style {
+  cursor: pointer;
+}
+
+.glyph-style:hover { 
+    color: grey;
+}
+
+.glyph-style:active { 
+    color: grey;
+}
+
+.glyph-grey {
+  color: grey;
+}

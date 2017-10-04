@@ -248,12 +248,12 @@ padding: 3px 5px 0 15px;
   font-family: 'Montserrat', sans-serif; font-size: 160px;
 }
 
-/*@media screen and (max-width: 1535px) {
-	.aboutText {
-		font-size: 120px;
-		margin-left: 115px;
-	}
-}*/
+@media screen and (max-width: 553px) {
+    .faqText {
+          font-family: 'Montserrat', sans-serif; font-size: 70px;
+          text-align: center;
+    }
+}
 
 .found-pet-panel {
 
