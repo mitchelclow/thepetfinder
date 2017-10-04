@@ -182,7 +182,7 @@ font-family: 'Montserrat', sans-serif; font-size: 20px;
   padding-top: 700px;
   /*padding-bottom: 50px;*/
   max-height: 100%;
-  margin: 100px 0 0 45px;
+  margin: 100px 0 0 0px;
   background: #F4F3EF;
   border: 2px solid #000000;
   border-radius: 25px;
@@ -202,11 +202,23 @@ font-family: 'Montserrat', sans-serif; font-size: 20px;
 
 .aboutText {
   font-family: 'Montserrat', sans-serif; font-size: 160px;
-  /*margin-left: 50%;
-  margin-right: 50%;*/
 	text-align: center;
-
 }
+
+@media screen and (max-width: 700px) {
+    .aboutText {
+          font-family: 'Montserrat', sans-serif; font-size: 100px;
+          text-align: center;
+    }
+}
+
+@media screen and (max-width: 501px) {
+    .aboutText {
+          font-family: 'Montserrat', sans-serif; font-size: 60px;
+          text-align: center;
+    }
+}
+
 
 .aboutDescrip {
 font-family: 'Montserrat', sans-serif; font-size: 20px;
@@ -221,7 +233,7 @@ padding: 3px 5px 0 15px;
   padding-top: 700px;
   padding-bottom: 50px;
   max-height: 100%;
-  margin: 100px 0 25px 45px;
+  margin: 100px 0 25px 0px;
   background: #F4F3EF;
   border: 2px solid #000000;
   border-radius: 25px;

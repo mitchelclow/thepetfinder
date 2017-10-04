@@ -180,7 +180,8 @@ font-family: 'Montserrat', sans-serif; font-size: 20px;
   padding-top: 700px;
   /*padding-bottom: 50px;*/
   max-height: 100%;
-  margin: 100px 0 0 45px;
+  margin: auto;
+  margin-top: 100px;
   background: #F4F3EF;
   border: 2px solid #000000;
   border-radius: 25px;
@@ -189,7 +190,6 @@ font-family: 'Montserrat', sans-serif; font-size: 20px;
 .dogPicture {
 
   margin-top: -680px;
-  padding-left: 83px;
 }
 
 .fido {
@@ -198,8 +198,21 @@ font-family: 'Montserrat', sans-serif; font-size: 20px;
 
 .adoptText {
   font-family: 'Montserrat', sans-serif; font-size: 118px;
-  /*padding-right: 6%;*/
   text-align: center;
+}
+
+@media screen and (max-width: 480px) {
+    .adoptText {
+          font-family: 'Montserrat', sans-serif; font-size: 60px;
+          text-align: center;
+    }
+}
+
+@media screen and (max-width: 308px) {
+    .adoptText {
+          font-family: 'Montserrat', sans-serif; font-size: 40px;
+          text-align: center;
+    }
 }
 
 .aboutDescrip {
