@@ -2,14 +2,14 @@ $(document).ready(function() {
   /* global moment */
   // foundContainer holds all of our posts
   var foundContainer = $(".found-container");
-  var foundposts;
+  var userfounds;
 
   // This function grabs posts from the database and updates the view
   function getPosts() {
-    $.get("/api/UserFound", function(data) {
-      console.log("s", data);
-    foundposts = data.reverse();
-      if (!foundposts || !foundposts.length) {
+    $.get("/api/userfounds", function(data) {
+      console.log("Found", data);
+    userfounds = data.reverse();
+      if (!userfounds || !userfounds.length) {
         displayEmpty();
       }
       else {
@@ -20,13 +20,12 @@ $(document).ready(function() {
 
   // Getting the initial list of posts
   getPosts();
-  // InitializeRows handles appending all of our constructed post HTML inside
-  // foundContainer
+  // InitializeRows handles appending all of our constructed post HTML inside foundContainer
   function initializeRows() {
     foundContainer.empty();
     var postsToAdd = [];
-    for (var i = 0; i < foundposts.length; i++) {
-      postsToAdd.push(createNewRow(foundposts[i]));
+    for (var i = 0; i < userfounds.length; i++) {
+      postsToAdd.push(createNewRow(userfounds[i]));
     }
     foundContainer.append(postsToAdd);
   }
@@ -93,14 +92,13 @@ $(document).ready(function() {
     newPostPanel.data("post", post);
     return newPostPanel;
   }
-
-  // This function displays a message when there are no posts
-  function displayEmpty() {
-    foundContainer.empty();
-    var messageh2 = $("<h2>");
-    messageh2.css({ "text-align": "center", "margin-top": "50px" });
-    messageh2.html("No posts yet,");
-    foundContainer.append(messageh2);
-  }
-
+  //
+  // // This function displays a message when there are no posts
+  // function displayEmpty() {
+  //   foundContainer.empty();
+  //   var messageh2 = $("<h2>");
+  //   messageh2.css({ "text-align": "center", "margin-top": "50px" });
+  //   messageh2.html("No posts yet,");
+  //   foundContainer.append(messageh2);
+  // }
 });

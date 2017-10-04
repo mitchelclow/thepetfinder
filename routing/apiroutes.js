@@ -1,16 +1,12 @@
-// Requiring models
-var db = require("./../models");
+// Requiring userfound model
+var db = require("../models");
 
 // Routes
 module.exports = function(app) {
-
-  // GET route for getting all of the posts
-  app.get("/api/UserFound", function(req, res) {
-    db.UserFound.findAll({
-      where: {
-        email: req.params.email
-      }
-    })
+  // GET route for getting all of the found posts
+  app.get("/api/userfounds/", function(req, res) {
+    // .UserFound. is variable from userfound model
+    db.UserFound.findAll({})
     .then(function(dbPost) {
       res.json(dbPost);
     });
@@ -25,6 +21,6 @@ module.exports = function(app) {
     )
     .then(function(dbPost) {
       res.redirect('../foundDisplay.html');
+    });
   });
-});
 };

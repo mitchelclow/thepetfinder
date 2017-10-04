@@ -50,9 +50,9 @@ $(document).ready(function() {
 
   });
 
-  // Submits a new post and brings user to blog page upon completion
+  // Submits a new post and brings user to foundDisplay page upon completion
   function submitPost(Post) {
-    $.post("/api/thepetfinder", Post, function() {
+    $.post("/api/thepetfinder_db", Post, function() {
       window.location.href = "/foundDisplay";
     });
   }

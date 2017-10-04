@@ -1,24 +1,20 @@
-// ===============================================================================
-// DEPENDENCIES
-// We need to include the path package to get the correct file path for our html
-// ===============================================================================
+// htmlroutes.js offers a set of routes for sending users to the correct pages
+// Requiring an npm package
 var path = require("path");
-// ===============================================================================
-// ROUTING
-// ===============================================================================
+
+// Routes
 module.exports = function(app) {
-  // HTML GET Requests
-  // Below code handles when users "visit" a page.
-  // In each of the below cases the user is shown an HTML page of content
-  // ---------------------------------------------------------------------------
-  app.get("/home", function(req, res) {
-    res.sendFile(path.join(__dirname, "/../public/home.html"));
+  // Loading index.html
+  app.get("/index", function(req, res) {
+    res.sendFile(path.join(__dirname, "./../views/index.html"));
   });
-  app.get("/survey", function(req, res) {
-    res.sendFile(path.join(__dirname, "/../public/survey.html"));
+  // Loading foundDisplay.html
+  app.get("/foundDisplay", function(req, res) {
+    res.sendFile(path.join(__dirname, "./../views/foundDisplay.html"));
   });
-  // If no matching route is found default to home
-  app.use(function(req, res) {
-    res.sendFile(path.join(__dirname, "/../public/home.html"));
-  });
+
+  // Loading lostDisplay.html
+  // app.get("/lostDisplay", function(req, res) {
+  //   res.sendFile(path.join(__dirname, "./../views/lostDisplay.html"));
+  // });
 };

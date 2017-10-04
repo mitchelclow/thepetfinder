@@ -2,13 +2,13 @@ $(document).ready(function() {
   /* global moment */
   // lostContainer holds all of our posts
   var lostContainer = $(".lost-container");
-  var lostposts;
+  var userlosts;
 
   // This function grabs posts from the database and updates the view
   function getPosts() {
-    $.get("./api/lostposts", function(data) {
+    $.get("./api/userlosts", function(data) {
       console.log("Posts", data);
-      lostposts = data.reverse();
+      userlosts = data.reverse();
       if (!lostposts || !lostposts.length) {
         displayEmpty();
       }
@@ -25,7 +25,7 @@ $(document).ready(function() {
   function initializeRows() {
     lostContainer.empty();
     var postsToAdd = [];
-    for (var i = 0; i < lostposts.length; i++) {
+    for (var i = 0; i < userlosts.length; i++) {
       postsToAdd.push(createNewRow(lostposts[i]));
     }
     lostContainer.append(postsToAdd);
