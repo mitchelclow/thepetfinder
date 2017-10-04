@@ -4,10 +4,10 @@ $(document).ready(function() {
   var lostContainer = $(".lost-container");
   var userlosts;
 
-  // This function grabs posts from the database and updates the view
+  // This function grabs the lost posts from the database and updates the view
   function getPosts() {
     $.get("./api/userlosts", function(data) {
-      console.log("Posts", data);
+      console.log("Lost", data);
       userlosts = data.reverse();
       if (!lostposts || !lostposts.length) {
         displayEmpty();
@@ -26,7 +26,7 @@ $(document).ready(function() {
     lostContainer.empty();
     var postsToAdd = [];
     for (var i = 0; i < userlosts.length; i++) {
-      postsToAdd.push(createNewRow(lostposts[i]));
+      postsToAdd.push(createNewRow(userlosts[i]));
     }
     lostContainer.append(postsToAdd);
   }
@@ -45,6 +45,7 @@ $(document).ready(function() {
       "margin-top":
       "-15px"
     });
+
     var newPostPanelBody = $("<div>");
     newPostPanelBody.addClass("panel-body");
     newPostTitle.text(post.petName + " ");
@@ -76,8 +77,9 @@ $(document).ready(function() {
 
     var newLostPhone = $("<p>");
     newLostPhone.text("Contact Phone: " + post.phoneLost);
-    // var newLostPhoto = $("<div>");
-    // newLostPhoto.blob(post.photoLost);
+
+    var newLostPhoto = $("<div>");
+    newLostPhoto.blob(post.photoLost);
 
     newPostTitle.append(newPostDate);
     newPostPanelHeading.append(newPostTitle);
@@ -89,7 +91,7 @@ $(document).ready(function() {
     newPostPanelBody.append(newLostName);
     newPostPanelBody.append(newLostEmail);
     newPostPanelBody.append(newLostPhone);
-    // newPostPanelBody.append(newLostPhoto);
+    newPostPanelBody.append(newLostPhoto);
 
     newPostPanel.append(newPostPanelHeading);
     newPostPanel.append(newPostPanelBody);
@@ -98,12 +100,12 @@ $(document).ready(function() {
   }
 
   // This function displays a message when there are no posts
-  function displayEmpty() {
-    lostContainer.empty();
-    var messageh2 = $("<h2>");
-    messageh2.css({ "text-align": "center", "margin-top": "50px" });
-    messageh2.html("No posts yet,");
-    lostContainer.append(messageh2);
-  }
+  // function displayEmpty() {
+  //   lostContainer.empty();
+  //   var messageh2 = $("<h2>");
+  //   messageh2.css({ "text-align": "center", "margin-top": "50px" });
+  //   messageh2.html("No posts yet,");
+  //   lostContainer.append(messageh2);
+  // }
 
 });

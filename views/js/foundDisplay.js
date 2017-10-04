@@ -4,7 +4,7 @@ $(document).ready(function() {
   var foundContainer = $(".found-container");
   var userfounds;
 
-  // This function grabs posts from the database and updates the view
+  // This function grabs the found posts from the database and updates the view
   function getPosts() {
     $.get("/api/userfounds", function(data) {
       console.log("Found", data);

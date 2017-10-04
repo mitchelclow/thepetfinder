@@ -23,14 +23,14 @@ $(document).ready(function() {
   var dateLost = $("#dateLost");
   var genderLost = $("#genderLost");
   var commentLost = $("#commentLost");
-  // var photoLost = $("#photoLost")
+  var photoLost = $("#photoLost")
   // Adding an event listener for when the form is submitted
   $(lostForm).on("submit", function handleFormSubmit(event) {
     event.preventDefault();
-    // Wont submit the post if we are missing a body or a title
-    // if (!petName.val().trim() || !nameLost.val().trim() || !emailLost.val().trim() || !phoneLost.val().trim()) {
-    //   return;
-    // }
+    // Won't submit the post if we are missing a body or a title
+    if (!petName.val().trim() || !nameLost.val().trim() || !emailLost.val().trim() || !phoneLost.val().trim()) {
+      return;
+    }
     // Constructing a newPost object to hand to the database
     var newPost = {
       nameLost: userName.val().trim(),
@@ -42,7 +42,7 @@ $(document).ready(function() {
       dateLost: dateLost.val().trim(),
       genderLost: genderLost.val().trim(),
       commentLost: commentLost.val().trim()
-      // photoLost: photoLost.val().trim()
+      photoLost: photoLost.val().trim()
     };
 
     console.log(newPost);
@@ -52,9 +52,9 @@ $(document).ready(function() {
 
   });
 
-  // Submits a new post and brings user to blog page upon completion
+  // Submits a new post and brings user to lostDisplay page upon completion
   function submitPost(Post) {
-    $.post("/api/thepetfinder", Post, function() {
+    $.post("/api/thepetfinder_db", Post, function() {
       window.location.href = "/lostDisplay";
     });
   }

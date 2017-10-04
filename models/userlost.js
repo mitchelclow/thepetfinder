@@ -27,10 +27,6 @@ var UserLost = sequelize.define("UserLost", {
   },
   phoneLost: {
     type: DataTypes.STRING,
-    allowNull: false,
-      validate: {
-        len: [1]
-      }
   },
   addressLost: {
     type: DataTypes.STRING,
@@ -55,17 +51,14 @@ var UserLost = sequelize.define("UserLost", {
   },
   genderLost: {
     type: DataTypes.STRING,
-    allowNull: false,
-      validate: {
-        len: [1]
-      }
   },
   commentLost: {
     type: DataTypes.STRING
+  },
+  photoLost: {
+    type: DataTypes.BLOB,
   }
-  // photoLost: {
-  //   type: DataTypes.BLOB
-  // }
 });
+
 return UserLost;
 };

@@ -14,7 +14,7 @@ module.exports = function(app) {
   });
 
   // Loading lostDisplay.html
-  // app.get("/lostDisplay", function(req, res) {
-  //   res.sendFile(path.join(__dirname, "./../views/lostDisplay.html"));
-  // });
+  app.get("/lostDisplay", function(req, res) {
+    res.sendFile(path.join(__dirname, "./../views/lostDisplay.html"));
+  });
 };
