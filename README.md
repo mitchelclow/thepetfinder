@@ -6,7 +6,17 @@ In this group project, we created an application that helps reunite lost pets wi
 * View information on lost and found animals
 * Get answers to FAQ about finding a lost animals
 
-## Getting Started
+## Dependencies
+- react
+- react-dom
+
+## Developer Dependencies
+- babel-core
+- babel-loader
+- babel-preset-es2016
+- babel-preset-react
+- webpack
+- webpack-dev-server## Getting Started
 
 
 ### Prerequisites
@@ -44,11 +54,10 @@ Add additional notes about how to deploy this on a live system
 
 * **Mitchel Clow** - *User Interface, website content*
 * **Sally Bradfield** - *Initial database, testing*
-* **Tony Wahula** - *JavaScript, AWS*
 * **Amy Volkert** - *JavaScript, AWS*
 
 ## Acknowledgments
 
-* Hat tip to anyone who's code was used
+* Chase...
 * Inspiration
 * etc

@@ -9,7 +9,7 @@ $(document).ready(function() {
     $.get("./api/userlosts", function(data) {
       console.log("Lost", data);
       userlosts = data.reverse();
-      if (!lostposts || !lostposts.length) {
+      if (!userlosts || !userlosts.length) {
         displayEmpty();
       }
       else {
@@ -79,7 +79,7 @@ $(document).ready(function() {
     newLostPhone.text("Contact Phone: " + post.phoneLost);
 
     var newLostPhoto = $("<div>");
-    newLostPhoto.blob(post.photoLost);
+    newLostPhoto.text(post.photoLost);
 
     newPostTitle.append(newPostDate);
     newPostPanelHeading.append(newPostTitle);
