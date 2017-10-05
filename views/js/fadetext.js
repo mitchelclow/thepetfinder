@@ -1,6 +1,8 @@
 /* Downloaded from https://scriptscodes.com/ */         var words = document.getElementsByClassName('word');
 var wordArray = [];
 var currentWord = 0;
+
+var glyphClicked = false;
  
 words[currentWord].style.opacity = 1;
 for (var i = 0; i < words.length; i++) {
@@ -52,3 +54,26 @@ function splitLetters(word) {
  
 changeWord();
 setInterval(changeWord, 2000);
+
+
+
+// $( ".glyph-style" ).click(function() {
+
+//   if (glyphClicked) {
+
+//     $( ".glyph-style" ).removeClass( "glyph-grey" );
+
+//     console.log("This is the if.");
+
+//   }
+
+//   else {
+
+//     $( ".glyph-style" ).addClass( "glyph-grey" );
+
+//     console.log("This is the else.")
+//   }
+
+//     glyphClicked = !glyphClicked
+
+// });

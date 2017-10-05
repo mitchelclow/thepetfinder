@@ -193,10 +193,7 @@ a {
 .buttonPosition
 {
   text-align: center;
-  // margin-top: 550px;
-  position: absolute;
-  bottom: 5%;
-  right: 39%;
+  margin-top: 400px;
 }
 
 span1 {
@@ -320,4 +317,20 @@ p {
 
 .pawLogo {
   width: 6%;
+}
+
+.glyph-style {
+  cursor: pointer;
+}
+
+.glyph-style:hover { 
+    color: grey;
+}
+
+.glyph-style:active { 
+    color: grey;
+}
+
+.glyph-grey {
+  color: grey;
 }
