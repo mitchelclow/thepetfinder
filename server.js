@@ -6,6 +6,9 @@ var path = require('path');
 var sequelize = require('sequelize');
 var moment = require('moment');
 var fileUpload = require('express-fileupload');
+// Packages needed to handle authentication
+var passport = require('passport');
+var session = require('express-session')
 
 
 var port = process.env.PORT || 8080;
@@ -17,6 +20,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 app.use(express.static('./views'));
+
+// Initialzing passport and the express-session and add them as middleware
+app.use(session({ secret: 'keyboard cat',resave: true, saveUninitialized:true})); // session secret
+
+app.use(passport.initialize());
+
+app.use(passport.session()); // persistent login sessions
 
 app.use(fileUpload());
 // handling the upload

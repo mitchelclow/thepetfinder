@@ -4,8 +4,41 @@
 // Using the sequelize.define method and passing to arguments: the name of the model as a string, and an object with model's schema
 module.exports = function(sequelize, DataTypes) {
   var User = sequelize.define("User", {
-    email: DataTypes.STRING,
-    password: DataTypes.STRING
-  });
+    id: {
+      autoIncrement: true,
+      primaryKey: true,
+      type: Datatypes.INTEGER
+    },
+    firstname: {
+      type: Datatypes.STRING,
+      notEmpty: true
+    },
+    lastname: {
+      type: Datatypes.STRING,
+      notEmpty: true
+    },
+    username: {
+      type: Datatypes.TEXT,
+    },
+    about: {
+      type: Datatypes.TEXT,
+    },
+    email: {
+      type: Datatypes.TEXT,
+      validate: {
+        isEmail: true
+      },
+   password: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    last_login: {
+      type: Datatypes.DATE
+    },
+    status: {
+      type: Datatypes.ENUM('active', 'inactive'),
+      defaultValue: 'active'
+    }
+});
   return User;
-}
+};
