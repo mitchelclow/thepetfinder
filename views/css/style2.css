@@ -205,7 +205,7 @@ font-family: 'Montserrat', sans-serif; font-size: 20px;
 	text-align: center;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 765px) {
     .aboutText {
           font-family: 'Montserrat', sans-serif; font-size: 100px;
           text-align: center;
