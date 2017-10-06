@@ -222,7 +222,7 @@ font-family: 'Montserrat', sans-serif; font-size: 20px;
 
 .aboutDescrip {
 font-family: 'Montserrat', sans-serif; font-size: 20px;
-padding: 3px 5px 0 15px;
+padding: 3px 15px 15px 15px;
 }
 
 .faqContainer
@@ -234,7 +234,7 @@ padding: 3px 5px 0 15px;
   padding-bottom: 50px;
   max-height: 100%;
   margin: 100px 0 25px 0px;
-  background: #F4F3EF;
+  background: #E7EAEF;
   border: 2px solid #000000;
   border-radius: 25px;
 }

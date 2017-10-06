@@ -53,7 +53,7 @@ function splitLetters(word) {
 }
  
 changeWord();
-setInterval(changeWord, 2000);
+setInterval(changeWord, 2500);
 
 
 
