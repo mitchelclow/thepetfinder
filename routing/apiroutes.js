@@ -4,7 +4,7 @@ var authController = require('../controllers/authcontroller.js');
 var passport = require('../config/passport/passport.js');
 
 // Routes
-module.exports = function(app, passport) {
+module.exports = function(app) {
 
   // GET route for getting all of the found posts
   app.get("/api/userfounds", function(req, res) {
@@ -15,10 +15,17 @@ module.exports = function(app, passport) {
     });
   });
 
+  // GET route for getting all of the lost posts
+  app.get("/api/userlosts", function(req, res) {
+    // .UserLost. is variable from userlost model
+    db.UserLost.findAll({})
+    .then(function(dbPost) {
+      res.json(dbPost);
+    });
+  });
   app.get('/signup', authController.signup);
 
-
-    app.get('/signin', authController.signin);
+  app.get('/signin', authController.signin);
 
 
     // app.post('/signup', passport.authenticate('local-signup', {
@@ -28,16 +35,6 @@ module.exports = function(app, passport) {
     //     }
 
     // ));
-
-  // GET route for getting all of the lost posts
-  app.get("/api/userlosts", function(req, res) {
-    // .UserLost. is variable from userlost model
-    db.UserLost.findAll({})
-    .then(function(dbPost) {
-      res.json(dbPost);
-    });
-  });
-
   // POST route for saving a new post to the userfounds table
   app.post("/api/userfounds", function(req, res) {
     console.log(req.body);
