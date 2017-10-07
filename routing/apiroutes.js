@@ -1,9 +1,11 @@
 // Requiring userfound model
 var db = require("../models");
 var authController = require('../controllers/authcontroller.js');
+var passport = require('../config/passport/passport.js');
 
 // Routes
-module.exports = function(app) {
+module.exports = function(app, passport) {
+
   // GET route for getting all of the found posts
   app.get("/api/userfounds", function(req, res) {
     // .UserFound. is variable from userfound model
@@ -13,8 +15,20 @@ module.exports = function(app) {
     });
   });
 
-// Route for passport
-app.get('/signup', authController.signup);
+  app.get('/signup', authController.signup);
+
+
+    app.get('/signin', authController.signin);
+
+
+    // app.post('/signup', passport.authenticate('local-signup', {
+    //         successRedirect: '/dashboard',
+    //
+    //         failureRedirect: '/signup'
+    //     }
+
+    // ));
+
   // GET route for getting all of the lost posts
   app.get("/api/userlosts", function(req, res) {
     // .UserLost. is variable from userlost model

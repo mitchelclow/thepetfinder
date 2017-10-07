@@ -14,6 +14,10 @@ var session = require('express-session');
 var exphbs = require('express-handlebars');
 // Requiring API routes
 var setUpApiRoutes = require('./routing/apiroutes');
+// Requiring HTML routes
+var setUpHtmlRoutes = require('./routing/htmlroutes');
+// Importing the passport Strategy
+require('./config/passport/passport.js')(passport, db.user);
 
 var port = process.env.PORT || 8080;
 var app = express();
