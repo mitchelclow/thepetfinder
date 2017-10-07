@@ -1,5 +1,6 @@
 // Requiring userfound model
 var db = require("../models");
+var authController = require('../controllers/authcontroller.js');
 
 // Routes
 module.exports = function(app) {
@@ -12,6 +13,8 @@ module.exports = function(app) {
     });
   });
 
+// Route for passport
+app.get('/signup', authController.signup);
   // GET route for getting all of the lost posts
   app.get("/api/userlosts", function(req, res) {
     // .UserLost. is variable from userlost model
