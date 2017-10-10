@@ -1,35 +1,19 @@
 // Requiring npm packages
 var express = require('express');
-var db = require('./models');
-// Importing authController route
 var bodyParser = require('body-parser');
 var path = require('path');
 var sequelize = require('sequelize');
 var moment = require('moment');
+var env = require('dotenv').load();
 var fileUpload = require('express-fileupload');
 // Packages needed to handle authentication
 var passport = require('passport');
 var session = require('express-session');
 // Package for handlebars
 var exphbs = require('express-handlebars');
-// Requiring API routes
-var setUpApiRoutes = require('./routing/apiroutes');
-// Requiring authencation route auth.js
-var authRoute = require('./routing/auth');
-// Requiring HTML routes
-var setUpHtmlRoutes = require('./routing/htmlroutes');
-// Importing the passport Strategy
-require('./config/passport/passport.js')(passport, db.user);
 
 var port = process.env.PORT || 8080;
 var app = express();
-// *****For Handlebars
-app.set('views', './views')
-app.engine('hbs', exphbs({
-    extname: '.hbs'
-}));
-app.set('view engine', '.hbs');
-// ******
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -39,13 +23,28 @@ app.use(express.static('./views'));
 
 // Initialzing passport and the express-session and add them as middleware
 app.use(session({ secret: 'keyboard cat',resave: true, saveUninitialized:true})); // session secret
-
 app.use(passport.initialize());
-
 app.use(passport.session()); // persistent login sessions
+
+// For Handlebars
+app.set('views', './views')
+app.engine('hbs', exphbs({
+    extname: '.hbs'
+}));
+app.set('view engine', '.hbs');
 
 app.use(fileUpload());
 
+var db = require('./models');
+
+require('./config/passport/passport.js')(passport, db.user);
+
+// / Requiring authencation route auth.js
+var authRoute = require('./routing/auth')(app, passport);
+// Requiring API routes
+var setUpApiRoutes = require('./routing/apiroutes');
+// Requiring HTML routes
+var setUpHtmlRoutes = require('./routing/htmlroutes');
 setUpApiRoutes(app);
 // handling the upload
 // getting the file from ifound.html
