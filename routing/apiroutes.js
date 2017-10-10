@@ -1,7 +1,7 @@
 // Requiring userfound model
 var db = require("../models");
-var authController = require('../views/js/authcontroller.js');
-var passport = require('../config/passport/passport.js');
+// var authController = require('../controllers/authcontroller.js');
+// var passport = require('../config/passport/passport.js');
 
 // Routes
 module.exports = function(app) {
@@ -23,18 +23,7 @@ module.exports = function(app) {
       res.json(dbPost);
     });
   });
-  app.get('/signup', authController.signup);
 
-  app.get('/signin', authController.signin);
-
-
-    // app.post('/signup', passport.authenticate('local-signup', {
-    //         successRedirect: '/dashboard',
-    //
-    //         failureRedirect: '/signup'
-    //     }
-
-    // ));
   // POST route for saving a new post to the userfounds table
   app.post("/api/userfounds", function(req, res) {
     console.log(req.body);

@@ -5,9 +5,6 @@ var path = require("path");
 
 // Routes
 module.exports = function(app) {
-  // Loading signup.html
-  app.get('/signup', authController.signup);
-  app.get('/signin', authController.signin);
 
   // Loading index.html
   app.get("/index", function(req, res) {
