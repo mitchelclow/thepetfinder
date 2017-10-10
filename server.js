@@ -14,6 +14,8 @@ var session = require('express-session');
 var exphbs = require('express-handlebars');
 // Requiring API routes
 var setUpApiRoutes = require('./routing/apiroutes');
+// Requiring authencation route augh.js
+var authRoute = require('./routing/auth');
 // Requiring HTML routes
 var setUpHtmlRoutes = require('./routing/htmlroutes');
 // Importing the passport Strategy

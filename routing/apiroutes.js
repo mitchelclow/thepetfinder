@@ -1,6 +1,6 @@
 // Requiring userfound model
 var db = require("../models");
-var authController = require('../controllers/authcontroller.js');
+var authController = require('../views/js/authcontroller.js');
 var passport = require('../config/passport/passport.js');
 
 // Routes

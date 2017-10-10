@@ -5,10 +5,15 @@ var path = require("path");
 
 // Routes
 module.exports = function(app) {
+  // Loading signup.html
+  app.get('/signup', authController.signup);
+  app.get('/signin', authController.signin);
+
   // Loading index.html
   app.get("/index", function(req, res) {
     res.sendFile(path.join(__dirname, "./../views/index.html"));
   });
+
   // Loading foundDisplay.html
   app.get("/foundDisplay", function(req, res) {
     res.sendFile(path.join(__dirname, "./../views/foundDisplay.html"));

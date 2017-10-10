@@ -1,18 +1,30 @@
-var authController = require('../controllers/authcontroller.js');
+var authController = require('../views/js/authcontroller');
 
-modules.exports = function(app, passport) {
+module.exports = function(app, passport) {
 
-  // GET routes for signup and signin
-  app.get('/signup', authController.signup);
-  app.get('/signin', authController.signin);
 
   // POST route for posting to a signup
-  app.post('/signup', passport.authenticate('local-signup', {
-          successRedirect: '/dashboard',
-
-          failureRedirect: '/signup'
-      }
-
-  ));
+  app.post('/api/users', function(req, res) {
+    db.User.create(
+      req.body
+    )
+    .then(function(dbPost) {
+      res.redirect('../index.html');
+    });
+  });
 
 };
+
+
+// passport.authenticate('local-signup',
+
+// app.post("/api/userfounds", function(req, res) {
+//   console.log(req.body);
+//   // create takes an argument describing the item we want to insert into userfounds table
+//   db.UserFound.create(
+//     req.body
+//   )
+//   .then(function(dbPost) {
+//     res.redirect('../foundDisplay.html');
+//   });
+// });
