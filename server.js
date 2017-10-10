@@ -19,8 +19,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
-app.use(express.static('./views'));
 
+              app.use(express.static('./views'));
 // Initialzing passport and the express-session and add them as middleware
 app.use(session({ secret: 'keyboard cat',resave: true, saveUninitialized:true})); // session secret
 app.use(passport.initialize());
@@ -33,19 +33,21 @@ app.engine('hbs', exphbs({
 }));
 app.set('view engine', '.hbs');
 
-app.use(fileUpload());
-
 var db = require('./models');
+// Requiring authentication route auth.js
+var authRoute = require('./routing/auth')(app, passport);
 
 require('./config/passport/passport.js')(passport, db.user);
 
-// / Requiring authencation route auth.js
-var authRoute = require('./routing/auth')(app, passport);
+app.use(fileUpload());
+
+
 // Requiring API routes
 var setUpApiRoutes = require('./routing/apiroutes');
 // Requiring HTML routes
 var setUpHtmlRoutes = require('./routing/htmlroutes');
 setUpApiRoutes(app);
+
 // handling the upload
 // getting the file from ifound.html
 app.get('/', function(req, res) {

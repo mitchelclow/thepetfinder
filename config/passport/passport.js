@@ -6,6 +6,22 @@ module.exports = function(passport, user) {
   var User = user;
   var LocalStrategy = require('passport-local').Strategy;
 
+  // serialize user
+  passport.serializeUser(function(user, done) {
+    done(null, user.id);
+  });
+
+  // deserialize user
+  passport.deserializeUser(function(id, done) {
+    User.findById(id).then(function(user) {
+      if (user) {
+        done(null, user.get());
+      } else {
+        done(user.error, null);
+      }
+    });
+  });
+
   passport.use(
     'local-signup',
     new LocalStrategy(
@@ -53,21 +69,6 @@ module.exports = function(passport, user) {
               });
         }));
 
-  // // serialize user
-  // passport.serializeUser(function(user, done) {
-  //   done(null, user.id);
-  // });
-  //
-  // // deserialize user
-  // passport.deserializeUser(function(id, done) {
-  //   User.findById(id).then(function(user) {
-  //     if (user) {
-  //       done(null, user.get());
-  //     } else {
-  //       done(user.error, null);
-  //     }
-  //   });
-  // )};
 
 // module.exports ends
 };
