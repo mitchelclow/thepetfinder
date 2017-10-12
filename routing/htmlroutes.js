@@ -2,7 +2,6 @@
 // Requiring an npm package
 var path = require("path");
 
-
 // Routes
 module.exports = function(app) {
 
@@ -14,6 +13,21 @@ module.exports = function(app) {
   // Loading foundDisplay.html
   app.get("/foundDisplay", function(req, res) {
     res.sendFile(path.join(__dirname, "./../views/foundDisplay.html"));
+  });
+
+  // Loading signup.html
+  app.get("/signup", function(req, res) {
+    res.sendFile(path.join(__dirname, "./../views/signup.html"));
+  });
+
+  // Loading signin.html
+  app.get("/signin", function(req, res) {
+    res.sendFile(path.join(__dirname, "./../views/signin.html"));
+  });
+
+  // Loading dashboard.html which is letting users know they are logged in
+  app.get("/dashboard", function(req, res) {
+    res.sendFile(path.join(__dirname, "./../views/dashboard.html"));
   });
 
   // Loading lostDisplay.html

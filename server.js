@@ -28,11 +28,11 @@ app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
 
 // For Handlebars
-app.set('views', './views')
-app.engine('hbs', exphbs({
-    extname: '.hbs'
-}));
-app.set('view engine', '.hbs');
+// app.set('views', './views')
+// app.engine('hbs', exphbs({
+//     extname: '.hbs'
+// }));
+// app.set('view engine', '.hbs');
 
 var db = require('./models');
 // Requiring authentication route auth.js
@@ -48,6 +48,7 @@ var setUpApiRoutes = require('./routing/apiroutes');
 // Requiring HTML routes
 var setUpHtmlRoutes = require('./routing/htmlroutes');
 setUpApiRoutes(app);
+setUpHtmlRoutes(app);
 
 // handling the upload
 // getting the file from ifound.html
@@ -55,8 +56,19 @@ app.get('/', function(req, res) {
 	res.sendFile(path.join(__dirname, '/views', 'ifound.html'));
 });
 
-// placeholder for getting the file from ilost.html
+// app.get('/', function(req, res) {
+// 	res.sendFile(path.join(__dirname, '/views', 'signup.html'));
+// });
+//
+// app.get('/', function(req, res) {
+// 	res.sendFile(path.join(__dirname, '/views', 'signin.html'));
+// });
+//
+// app.get('/', function(req, res) {
+// 	res.sendFile(path.join(__dirname, '/views', 'dashboard.html'));
+// });
 
+// placeholder for getting the file from ilost.html
 app.post('/upload', function(req, res) {
 
 });
