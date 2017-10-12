@@ -1,8 +1,11 @@
 // Requiring userfound model
 var db = require("../models");
+var multer = require('multer');
+var fs = require('fs');
+var path = require('path');
 // var authController = require('../controllers/authcontroller.js');
 // var passport = require('../config/passport/passport.js');
-
+var upload = multer({ dest: path.join(__dirname, '/temp') });
 // Routes
 module.exports = function(app) {
 
@@ -37,14 +40,27 @@ module.exports = function(app) {
   });
 
   // POST route for saving a new post to the userlost table
-  app.post("/api/userlosts", function(req, res) {
+  app.post("/api/userlosts", upload.single('missingPet'), function(req, res) {
     console.log(req.body);
     // create takes an argument describing the item we want to insert into userlosts table
-    db.UserLost.create(
-      req.body
-    )
-    .then(function(dbPost) {
-      res.redirect('../lostDisplay.html');
-    });
-  });
+    if(req.file)
+    {
+      fs.readFile(req.file.path, function read(err, data) {
+  	    if (err)
+        {
+          res.status(400).send('Invalid or no image sent.');
+        }
+        req.body.photoLost = data;
+        db.UserLost.create(
+          req.body
+        )
+        .then(function(dbPost) {
+          res.redirect('../lostDisplay.html');
+        });
+  		  });
+    }
+    else {
+      res.status(400).send('Invalid or no image sent.');
+    }
+	});
 };
