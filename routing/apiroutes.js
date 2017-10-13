@@ -1,4 +1,3 @@
-// Requiring userfound model
 var db = require("../models");
 var multer = require('multer');
 var fs = require('fs');

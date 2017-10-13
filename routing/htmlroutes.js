@@ -1,5 +1,4 @@
 // htmlroutes.js offers a set of routes for sending users to the correct pages
-// Requiring an npm package
 var path = require("path");
 
 // Routes
@@ -10,9 +9,24 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "./../views/index.html"));
   });
 
+  // Loading ifound.html
+  app.get("/ifound", function(req, res) {
+    res.sendFile(path.join(__dirname, "./../views/ifound.html"));
+  });
+
+  // Loading ilost.html
+  app.get("/ilost", function(req, res) {
+    res.sendFile(path.join(__dirname, "./../views/ilost.html"));
+  });
+
   // Loading foundDisplay.html
   app.get("/foundDisplay", function(req, res) {
     res.sendFile(path.join(__dirname, "./../views/foundDisplay.html"));
+  });
+
+  // Loading lostDisplay.html
+  app.get("/lostDisplay", function(req, res) {
+    res.sendFile(path.join(__dirname, "./../views/lostDisplay.html"));
   });
 
   // Loading signup.html
@@ -30,8 +44,5 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "./../views/dashboard.html"));
   });
 
-  // Loading lostDisplay.html
-  app.get("/lostDisplay", function(req, res) {
-    res.sendFile(path.join(__dirname, "./../views/lostDisplay.html"));
-  });
+
 };
