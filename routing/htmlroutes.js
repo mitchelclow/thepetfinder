@@ -29,6 +29,16 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "./../views/lostDisplay.html"));
   });
 
+  // Loading adopt.html
+  app.get("/adopt", function(req, res) {
+    res.sendFile(path.join(__dirname, "./../views/adopt.html"));
+  });
+
+  // Loading contact.html
+  app.get("/contact", function(req, res) {
+    res.sendFile(path.join(__dirname, "./../views/contact.html"));
+  });
+
   // Loading signup.html
   app.get("/signup", function(req, res) {
     res.sendFile(path.join(__dirname, "./../views/signup.html"));
