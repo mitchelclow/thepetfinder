@@ -467,6 +467,9 @@ button:hover {
   text-align: center;
 }
 
+.petName {
+  font-weight: bold;
+}
 
 
 
