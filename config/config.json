@@ -1,11 +1,7 @@
 {
   "development": {
     "username": "root",
-<<<<<<< HEAD
     "password": "Canondale^31",
-=======
-    "password": "waterbottle",
->>>>>>> 964c81d84be501a5980db98b57d626f278a2318b
     "database": "thepetfinder_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
