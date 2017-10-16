@@ -1,7 +1,8 @@
 $(document).ready(function() {
   /* global moment */
   // foundContainer holds all of our posts
-  var foundContainer = $(".found-container");
+    $("h2").css("background-color", "pink");
+    var foundContainer = $(".found-container");
   var userfounds;
 
   // This function grabs the found posts from the database and updates the view
@@ -46,20 +47,31 @@ $(document).ready(function() {
 
     var newPostPanelBody = $("<div>");
     newPostPanelBody.addClass("panel-body");
-    newPostTitle.text("Lost " + post.typeFound);
+
+    newPostTitle.text(post.typeFound);
 
     var formattedDate = new Date(post.createdAt);
-    formattedDate = moment(formattedDate).format("MMMM Do YYYY, h:mm:ss a");
+    formattedDate = moment(formattedDate).format("MMMM Do YYYY, h:mm");
     newPostDate.text(formattedDate);
 
+
     var newFoundAddress = $("<p>");
-    newFoundAddress.text("Address Last Seen: " + post.addressFound);
+    newFoundAddress.text("Location Found: " + post.addressFound);
 
     var newFoundDate = $("<p>");
-    newFoundDate.text("Date Lost: " + post.dateFound);
+    newFoundDate.text("Date Found: " + post.dateFound);
 
-    var newFoundGender = $("<p>");
-    newFoundGender.text("Gender: " + post.genderFound);
+    // WORKING ON
+    // var newFoundGender = $("<p>");
+    //   if ($(newFoundGender).val() != '') {
+    //     newFoundGender.text("Gender: " + post.genderFound);
+    //   } else {
+    //     newFoundGender.text("Gender: Unknown");
+    //   }
+      // if (newFoundGender == null) {
+        // newFoundGender.text("Gender: Unknown");// your code here.
+        // };
+      // END WORKING ON - see append below
 
     var newFoundComment = $("<p>");
     newFoundComment.text("Additonal Info: " + post.commentFound);
@@ -80,7 +92,7 @@ $(document).ready(function() {
     newPostPanelHeading.append(newPostTitle);
     newPostPanelBody.append(newFoundAddress);
     newPostPanelBody.append(newFoundDate);
-    newPostPanelBody.append(newFoundGender);
+    // newPostPanelBody.append(newFoundGender);
     newPostPanelBody.append(newFoundComment);
     newPostPanelBody.append(newFoundName);
     newPostPanelBody.append(newFoundEmail);

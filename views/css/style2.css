@@ -21,6 +21,14 @@ background-size: ;
   font-size: 25px;
 }
 
+.panel-heading {
+	text-transform: capitalize;
+}
+
+.panel-body {
+	text-transform: capitalize;
+}
+
 .orangeHead {
   color: orange;
 }
