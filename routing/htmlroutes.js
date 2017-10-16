@@ -41,12 +41,12 @@ module.exports = function(app) {
 
   // Loading signup.html
   app.get("/signup", function(req, res) {
-    res.sendFile(path.join(__dirname, "./../views/signup.html"));
+    res.sendFile(path.join(__dirname, "./../views/adopt.html"));
   });
 
   // Loading signin.html
   app.get("/signin", function(req, res) {
-    res.sendFile(path.join(__dirname, "./../views/signin.html"));
+    res.sendFile(path.join(__dirname, "./../views/adopt.html"));
   });
 
   // Loading dashboard.html which is letting users know they are logged in

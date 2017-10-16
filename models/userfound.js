@@ -50,7 +50,7 @@ var UserFound = sequelize.define("UserFound", {
     type: DataTypes.STRING,
   },
   photoFound: {
-    type: DataTypes.BLOB,
+    type: DataTypes.STRING,
   }
 });
 

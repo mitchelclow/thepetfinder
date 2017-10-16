@@ -53,10 +53,10 @@ var UserLost = sequelize.define("UserLost", {
     type: DataTypes.STRING,
   },
   commentLost: {
-    type: DataTypes.STRING
+    type: DataTypes.STRING,
   },
   photoLost: {
-    type: DataTypes.BLOB,
+    type: DataTypes.STRING,
   }
 });
 

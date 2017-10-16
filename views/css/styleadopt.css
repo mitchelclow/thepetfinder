@@ -23,7 +23,76 @@ body
   color: orange;
 }
 
+.adoptPhoto {
+	overflow: hidden;
+	border-style: solid;
+	border-color: #F4F3EF;
+	border-width: thick;
+	border-radius: 10px;
+}
 
+.adoptPhoto img {
+  width: 100%;
+  height: 100%;
+	padding-top: 2px;
+}
+
+.adoptInfo {
+	margin-top: 10px;
+	padding: 6px 6px 6px 6px;
+	background-color: #F4F3EF;
+	border-radius: 10px;
+}
+/* Modal Header */
+.modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+/* Modal Body */
+.modal-body {padding: 2px 16px;}
+
+/* Modal Footer */
+/*.modal-footer {
+    background-color: #5cb85c;
+    color: white;
+}*/
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin-top: 100px;
+		margin-left: 600px;
+    padding: 0;
+    border: 1px solid #888;
+    width: 30%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+#myBtn {
+	margin-left: 100px;
+
+}
+#signin {
+	padding-right: 20px;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
 body {
   min-height: 100%;
   margin: 0;
@@ -125,7 +194,7 @@ font-family: 'Montserrat', sans-serif; font-size: 20px;
   padding-top: 30px;
   padding-bottom: 50px;
   max-height: 100%;
-  margin: 10px 0 0 0;
+  margin: 20px 0 0 0;
   background-color: #888888;
   border: 4px solid #000000;
   position: absolute;
@@ -155,26 +224,39 @@ font-family: 'Montserrat', sans-serif; font-size: 20px;
   max-width: 1047px;
   padding-top: 700px;
   /*padding-bottom: 50px;*/
-  max-height: 100%;
+  /*max-height: 100%;
   margin: auto;
   margin-top: 100px;
   background: #F4F3EF;
   border: 2px solid #000000;
-  border-radius: 25px;
+  border-radius: 25px;*/
 }
 
 .dogPicture {
-
   margin-top: -680px;
 }
 
-.fido {
+/*.fido {
 	width: 100%;
-}
+}*/
+.info {
+	font-family:  'Montserrat', sans-serif;
+	font-size: 17.5px;
+	/*font-style: italic;*/
+	font-weight: normal;
+	color: #F4F3EF;
+	background: #5c421a;
+	border-radius: 10px;
+	margin-bottom: 16px;
+	padding: 10px;
+	padding-bottom: 2px;
+	letter-spacing: 1px;
 
+}
 .adoptText {
   font-family: 'Montserrat', sans-serif; font-size: 118px;
   text-align: center;
+
 }
 
 @media screen and (max-width: 480px) {
@@ -193,7 +275,7 @@ font-family: 'Montserrat', sans-serif; font-size: 20px;
 
 .aboutDescrip {
 font-family: 'Montserrat', sans-serif; font-size: 20px;
-padding: 3px 10px 0 15px;
+/*padding: 3px 10px 0 15px;*/
 }
 
 .faqContainer
@@ -210,10 +292,10 @@ padding: 3px 10px 0 15px;
   border-radius: 25px;
 }
 
-.tabby {
+/*.tabby {
   width: 100%;
 	padding-right: 10px;
-}
+}*/
 
 .faqText {
   font-family: 'Montserrat', sans-serif; font-size: 160px;
@@ -314,10 +396,6 @@ button:hover {
   margin-bottom: 5px;
 }
 
-
-
-
-   
 @import url(http://fonts.googleapis.com/css?family=Roboto);
 
 * {
@@ -412,7 +490,7 @@ button:hover {
 }
 
 .modal-footer {
-    padding: 15px 15px 15px 15px;
+    padding: 20px 15px 15px 20px;
     text-align: left;
     border-top: 0px;
 }
@@ -423,6 +501,7 @@ button:hover {
 
 .btn {
     border-radius: 0px;
+		margin-left: 8px;
 }
 
 .btn:focus,
@@ -454,6 +533,8 @@ button:hover {
 
 .form-control {
   border-radius: 0px;
+	/*width: 200px;*/
+	margin-left: 10px;
 }
 
 
