@@ -1,0 +1,17 @@
+<div class="row wrap">
+    {{#unless users}}
+        <h1>No Users Have Been Added</h1>
+    {{/unless}}
+
+    {{#each users}}
+        <div class="user column split">
+            <div class="image">
+                <img src="pets/{{pet_image}}">
+            </div>
+            <div class="info">
+                <h3>Pet Owner: {{username}}</h3>
+                <a href="mailto:{{email}}">Contact: {{email}}</a>
+            </div>
+        </div>
+    {{/each}}
+</div>
