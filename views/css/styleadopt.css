@@ -31,10 +31,12 @@ body
 	border-radius: 10px;
 }
 
+.
+
 .adoptPhoto img {
   width: 100%;
   height: 100%;
-	padding-top: 2px;
+
 }
 
 .adoptInfo {
@@ -112,7 +114,7 @@ body {
 }
 
 .container {
-  width: 80%;
+
   margin: 0 auto;
 }
 
@@ -221,7 +223,6 @@ font-family: 'Montserrat', sans-serif; font-size: 20px;
 .adoptContainer {
 
   width: 100%;
-  max-width: 1047px;
   padding-top: 700px;
   /*padding-bottom: 50px;*/
   /*max-height: 100%;
