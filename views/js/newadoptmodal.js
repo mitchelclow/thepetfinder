@@ -1,8 +1,14 @@
-// Get the modal
+// Get the login modal
 var modal = document.getElementById('myModal');
 
-// Get the button that opens the modal
+// Get the register modal
+// var modal = document.getElementById('yourModal');
+
+// Get the button that opens the login modal
 var btn = document.getElementById("myBtn");
+
+// Get the button that opens the regisiter modal
+var btn = document.getElementById("yourBtn");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
