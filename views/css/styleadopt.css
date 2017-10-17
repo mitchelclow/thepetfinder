@@ -28,7 +28,7 @@ body
 	border-style: solid;
 	border-color: #F4F3EF;
 	border-width: thick;
-	border-radius: 10px;
+	border-radius: 180px;
 }
 
 .adoptPhoto img {
@@ -221,7 +221,6 @@ font-family: 'Montserrat', sans-serif; font-size: 20px;
 .adoptContainer {
 
   width: 100%;
-  
   padding-top: 700px;
   /*padding-bottom: 50px;*/
   /*max-height: 100%;
