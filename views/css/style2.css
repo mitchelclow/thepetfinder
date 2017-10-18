@@ -186,7 +186,7 @@ font-family: 'Montserrat', sans-serif; font-size: 20px;
 .contactContainer {
 
   width: 100%;
-  max-width: 1047px;
+
   padding-top: 700px;
   /*padding-bottom: 50px;*/
   max-height: 100%;
@@ -237,7 +237,7 @@ padding: 3px 15px 15px 15px;
 
 {
   width: 100%;
-  max-width: 1047px;
+
   padding-top: 700px;
   padding-bottom: 50px;
   max-height: 100%;

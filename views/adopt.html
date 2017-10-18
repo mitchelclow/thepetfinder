@@ -13,9 +13,7 @@
 
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
   <link href="./css/styleadopt.css" rel="stylesheet">
 </head>
 
@@ -35,14 +33,44 @@
 
 
     <div class="login-buttons">
-      <!-- <button role="button" data-toggle="modal" data-target="#login-modal">
-        Login
-      </button> -->
 
-      <!-- Trigger/Open The Modal -->
-      <button id="myBtn">Login</button>
+      <!-- Trigger/Open the Modals -->
+      <button class="registerBtn" id="registerBtn">Register</button>
+      <button id="loginBtn">Login</button>
 
-      <!-- The Modal -->
+      <!-- The Register Modal -->
+      <div id="myModalTwo" class="modal">
+
+        <!-- Login Modal content -->
+        <div class="modal-content">
+          <div class="modal-header" align="center">
+            <img id="img_logo" src="images/paw.png">
+            <!-- <img class="pawLogo" src=""></img> -->
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+            </button>
+          </div>
+
+          <div id="div-login-msg">
+              <div id="icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
+              <span id="text-login-msg typeEmail">Type your email and password.</span>
+          </div>
+
+          <form id="signup" name="signup" method="post" action="/signup">
+              <label for="email">Email</label>
+              <input class="text" name="email" type="email" />
+              <label for="firstname">Firstname</label>
+              <input name="firstname" type="text" />
+              <label for="lastname">Lastname</label>
+              <input name="lastname" type="text" />
+              <label for="password">Password</label>
+              <input name="password" type="password" />
+              <input class="btn" type="submit" value="Sign Up" />
+          </form>
+        </div>
+      </div>
+
+      <!-- The Login Modal -->
       <div id="myModal" class="modal">
 
         <!-- Login Modal content -->
@@ -54,10 +82,10 @@
               <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
             </button>
           </div>
-          <span class="close">&times;</span>
+
           <div id="div-login-msg">
               <div id="icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
-              <span id="text-login-msg">Type your email and password.</span>
+              <span id="text-login-msg typeEmail">Type your email and password.</span>
           </div>
 
           <form id="signin" name="signin" method="post" action="signin">
@@ -77,8 +105,6 @@
               </div>
           </form>
         </div>
-<!-- Sign up -->
-
       </div>
     </div>
 
@@ -118,66 +144,10 @@
                             </div>
                   <div>
                                 <button id="login_lost_btn" type="button" class="btn btn-link">Lost Password?</button>
-                                <button id="login_register_btn" type="button" class="btn btn-link">Register</button>
                             </div>
                 </div>
                   <!-- End # Login Form -->
                   </form>
-
-
-
-
-                    <!-- Begin | Lost Password Form -->
-                    <!-- <form id="lost-form" style="display:none;">
-                  <div class="modal-body">
-                <div id="div-lost-msg">
-                                <div id="icon-lost-msg" class="glyphicon glyphicon-chevron-right"></div>
-                                <span id="text-lost-msg">Type your e-mail.</span>
-                            </div>
-                <input id="lost_email" class="form-control" type="text" placeholder="E-Mail (type ERROR for error effect)" required>
-                  </div>
-                <div class="modal-footer">
-                            <div>
-                                <button type="submit" class="btn btn-primary btn-lg btn-block">Send</button>
-                            </div>
-                            <div>
-                                <button id="lost_login_btn" type="button" class="btn btn-link">Log In</button>
-                                <button id="lost_register_btn" type="button" class="btn btn-link">Register</button>
-                            </div>
-                </div>
-                    </form> -->
-                    <!-- End | Lost Password Form -->
-
-
-
-
-  <!-- Begin | Register Form -->
-  <!-- <form id="register-form" style="display:none;" name="signup" method="post" action="/signup">
-    <div class="modal-body">
-      <div id="div-register-msg">
-        <div id="icon-register-msg" class="glyphicon glyphicon-chevron-right"></div>
-        <span id="text-register-msg">Register an account.</span>
-      </div>
-      <input id="register_username" class="form-control" type="text" placeholder="Username (type ERROR for error effect)" required>
-     <input id="register_email" class="form-control" type="text" placeholder="Email" required>
-      <input id="register_password" class="form-control" type="password" placeholder="Password" required>
-    </div>
-
-    <div class="modal-footer">
-      <div>
-        <button type="submit" class="btn btn-primary btn-lg btn-block">Register</button>
-      </div>
-      <div>
-        <button id="register_login_btn" type="button" class="btn btn-link">Log In</button>
-        <button id="register_lost_btn" type="button" class="btn btn-link">Lost Password?</button>
-      </div>
-    </div> --> -->
-  <!-- End | Register Form -->
-  <!-- </form> -->
-
-                <!-- End # DIV Form -->
-                <!-- </div> -->
-
 
       </div>
     </div>
@@ -189,33 +159,19 @@
 
 
 
-
-
- <!--      <button class="info-button" data-toggle="modal" data-target="#myModal">Info</button>
-
-
-
-          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                  <h2 class="modal-title modal-title-edit" id="myModalLabel">How To</h2>
-                </div>
-                <div class="modal-body modal-edit">
-                  Our Adopt-a-Pet page allows you to see all of the recent pets posted for adoption to our The Pet Finder adoption center. If you're interested in adopting a pet, feel free to login or create an account to be able to send us a message about the pet that you're interested in. Remember, all pets need a loving home, and yours could be the final loving house for any given fluffy, hairy, or scaly pet.
-
-                </div>
-              </div>
-            </div>
-          </div>
+</div>
 
 
 
 
-    </div> -->
+
+
+
+
 
   </ul>
+
+
 
   <!-- Adopt-a-Pet -->
   <div class="container">
@@ -225,7 +181,7 @@
           <div class="col-md-12">
             <div class="adoptText">Adopt-a-Pet</div>
             <div class=info>
-              <p><i>Friends of Animals</i> (“Friends”) rescues abandoned pets in high-kill shelters throughout Colorado, Texas, and New Mexico, giving a voice to abandoned, abused, and overlooked animals. Through our partnership with Friends, we are able to offer the following animals for adoption. If interested in pet, create a login with us and use the form below.</p>
+              <p><i>Friends of Animals</i> (“Friends”) rescues abandoned pets in high-kill shelters throughout Colorado, Texas, and New Mexico, giving a voice to abandoned, abused, and overlooked animals. Through our partnership with Friends, we are able to offer the following animals for adoption. If you are interested in a pet, create a login with us and use the form below.</p>
             </div>
           </div>
         </div>
@@ -257,14 +213,16 @@
                   </div>
 
                   <div class="col-md-4">
-                    <div class="adoptPhoto"><img src="./images/bird.png" alt="tabby"></img></div>
+                    <div class="adoptPhoto"><img src="./images/golden.png" alt="golden"></img></div>
                     <div class="adoptInfo">
-                      <div class="petName">Name: Rascal</div>
-                      <div>Age: 9</div>
+                      <div class="petName">Name: Scout</div>
+                      <div>Age: 3</div>
                       <div>Gender: Male</div>
-                      <div>Breed:  Cockatiel</div>
+                      <div>Breed: Golden Retriever</div>
                     </div>
                   </div>
+
+
 
               </div>
 
@@ -283,12 +241,12 @@
                   </div>
 
                   <div class="col-md-4">
-                    <div class="adoptPhoto"><img src="./images/golden.png" alt="golden"></img></div>
+                    <div class="adoptPhoto"><img src="./images/bird.png" alt="tabby"></img></div>
                     <div class="adoptInfo">
-                      <div class="petName">Name: Scout</div>
-                      <div>Age: 3</div>
+                      <div class="petName">Name: Rascal</div>
+                      <div>Age: 9</div>
                       <div>Gender: Male</div>
-                      <div>Breed: Golden Retriever</div>
+                      <div>Breed:  Cockatiel</div>
                     </div>
                   </div>
 
@@ -316,15 +274,14 @@
                 <div class="panel-heading">Adoption Inquiry</div>
                 <div class="panel-body">
                   <form class="form-horizontal">
-
                     <div class="form-group row">
-                      <label class="control-label col-sm-2" for="petinterest">Pet name:</label>
+                      <label class="control-label col-sm-2" for="petinterest">Your Name:</label>
                       <div class="col-sm-10">
-                        <input type="email" class="form-control" id="emailFound" placeholder="">
+                        <input type="email" class="form-control" placeholder="Email">
                       </div>
                     </div>
                     <div class="form-group row">
-                      <label class="control-label col-sm-2" for="comment">Message:</label>
+                      <label class="control-label col-sm-2" for="comment">:</label>
                       <div class="col-sm-10">
                         <textarea class="form-control" rows="3" id="commentFound"></textarea>
                       </div>
