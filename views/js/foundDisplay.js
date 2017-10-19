@@ -1,9 +1,9 @@
 $(document).ready(function() {
   /* global moment */
   // foundContainer holds all of our posts
-    $("h2").css("background-color", "pink");
+    // $("h2").css("background-color", "pink");
     var foundContainer = $(".found-container");
-  var userfounds;
+    var userfounds;
 
   // This function grabs the found posts from the database and updates the view
   function getPosts() {
@@ -47,13 +47,11 @@ $(document).ready(function() {
 
     var newPostPanelBody = $("<div>");
     newPostPanelBody.addClass("panel-body");
-
-    newPostTitle.text(post.typeFound);
+    newPostTitle.text(post.typeFound + " ");
 
     var formattedDate = new Date(post.createdAt);
     formattedDate = moment(formattedDate).format("MMMM Do YYYY, h:mm A");
     newPostDate.text(formattedDate);
-
 
     var newFoundAddress = $("<p>");
     newFoundAddress.text("Location Found: " + post.addressFound);
@@ -85,12 +83,14 @@ $(document).ready(function() {
     var newFoundPhone = $("<p>");
     newFoundPhone.text("Contact Phone: " + post.phoneFound);
 
-    var newFoundPic = $('.').attr(src);
+    // var newFoundPic = $('.').attr(src);
+    // var newFoundPic = $('img').photoFound('src');
+    // newFoundPic.text(post.photoFound);
 
-
-
-    var newFoundPic = $('img').photoFound('src');
-    newFoundPic.text(post.photoFound);
+    var newLostPhoto = $(
+       "<div>" + '<img src ="pets/' + post.photoFound + '" alt="Pet Image">' +
+       "</div>"
+     );
 
     newPostTitle.append(newPostDate);
     newPostPanelHeading.append(newPostTitle);

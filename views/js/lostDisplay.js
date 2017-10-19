@@ -21,7 +21,6 @@ $(document).ready(function() {
   // Getting the initial list of posts
   getPosts();
   // InitializeRows handles appending all of our constructed post HTML inside
-  // lostContainer
   function initializeRows() {
     lostContainer.empty();
     var postsToAdd = [];
@@ -42,8 +41,7 @@ $(document).ready(function() {
     newPostDate.css({
       float: "right",
       "font-weight": "700",
-      "margin-top":
-      "-15px"
+      "margin-top": "-15px"
     });
 
     var newPostPanelBody = $("<div>");

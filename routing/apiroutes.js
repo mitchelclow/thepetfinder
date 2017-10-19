@@ -36,7 +36,17 @@ module.exports = function (app) {
       var photo = req.file;
       console.log(photo);
 
-       var file_name = photo.originalname;
+       var file_name = '';
+
+       var fileExtension = photo.originalname.split('.')[1];
+
+       for(var index = 0; index < 25; index++)
+       {
+         file_name += String.fromCharCode(Math.floor((Math.random() * 25) + 65));
+       }
+
+       file_name += '.' + fileExtension;
+
        var image_url = path.join(__dirname, '../public/pets/' + file_name);
 
        fs.readFile(photo.path, function(err, photoData) {
@@ -44,12 +54,12 @@ module.exports = function (app) {
 
          mkdirp(path.dirname(image_url), function() {
            // Save the image to the public/profiles directory using the data we got from the readFile as binary
-           fs.writeFile(image_url, photo, 'binary', function(err) {
+           fs.writeFile(image_url, photoData, 'binary', function(err) {
               if (err) throw err;
 
               // Set the
               var data = req.body;
-
+              data.photoFound = file_name;
               console.log(data);
 
               db.UserFound.create(data).then(function() {
