@@ -46,6 +46,24 @@
     </div>
   </div>
 
+  <script>
+    fetch('./api/userfounds').then(function(response) {
+      var contentType = response.headers.get("content-type");
+      if(contentType && contentType.includes("application/json")) {
+        return response.json();
+      }
+      throw new TypeError("Oops, we haven't got JSON!");
+    })
+    .then(function(json) {
+      for(var foundPet of json)
+      {
+        console.log(foundPet);
+        $('.lost-container').append('<img src="./pets/' + foundPet.photoLost + '" style="max-width: 300px;"/>');
+      }
+     })
+    .catch(function(error) { console.log(error); });
+  </script>
+
 <style media="screen">
   .panel {
     margin-top: 40px;
