@@ -85,9 +85,10 @@ $(document).ready(function() {
     var newFoundPhone = $("<p>");
     newFoundPhone.text("Contact Phone: " + post.phoneFound);
 
-    var newFoundPic = $("<div>");
-    newFoundPic.text(post.photoFound);
-
+    var newFoundPic = $(
+     "<div>" + '<img src ="pets/' + post.photoFound + '" alt="Pet Image">' +
+     "</div>"
+    );
     newPostTitle.append(newPostDate);
     newPostPanelHeading.append(newPostTitle);
     newPostPanelBody.append(newFoundAddress);

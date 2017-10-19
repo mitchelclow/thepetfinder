@@ -37,7 +37,7 @@
         <div class="panel panel-default">
           <div class="panel-heading">I lost my pet</div>
           <div class="panel-body">
-            <form action="./api/userLosts" method="POST" class="form-horizontal lost-form" >
+            <form action="/api/userLosts" method="POST" class="form-horizontal lost-form" enctype="multipart/form-data">
 
               <div class="form-group row">
                 <label class="control-label col-sm-2" for="userName">Your Name:</label>
@@ -110,7 +110,7 @@
               <div class="form-group row">
                 <label class="control-label col-sm-2" for="photoLost">Photo (limit to 350x350):</label>
                 <div class="col-sm-10">
-                  <input name="photoLost" type="file" class="form-control-file" id="photoLost" placeholder="URL">
+                  <input type="file" name="photoLost" class="form-control-file" id="photoLost">
                 </div>
               </div>
 

@@ -5,8 +5,8 @@ var path = require("path");
 module.exports = function(app) {
 
   // Loading index.html
-  app.get("/index", function(req, res) {
-    res.sendFile(path.join(__dirname, "./../views/index.html"));
+  app.get("/", function(req, res) {
+    res.sendFile(path.join(__dirname, "../views/index.html"));
   });
 
   // Loading ifound.html

@@ -78,8 +78,10 @@ $(document).ready(function() {
     var newLostPhone = $("<p>");
     newLostPhone.text("Contact Phone: " + post.phoneLost);
 
-    var newLostPhoto = $("<div>");
-    newLostPhoto.text(post.photoLost);
+    var newLostPhoto = $(
+       "<div>" + '<img src ="pets/' + post.photoFound + '" alt="Pet Image">' +
+       "</div>"
+     );
 
     newPostTitle.append(newPostDate);
     newPostPanelHeading.append(newPostTitle);
@@ -100,12 +102,12 @@ $(document).ready(function() {
   }
 
   // This function displays a message when there are no posts
-  // function displayEmpty() {
-  //   lostContainer.empty();
-  //   var messageh2 = $("<h2>");
-  //   messageh2.css({ "text-align": "center", "margin-top": "50px" });
-  //   messageh2.html("No posts yet,");
-  //   lostContainer.append(messageh2);
-  // }
+  function displayEmpty() {
+    lostContainer.empty();
+    var messageh2 = $("<h2>");
+    messageh2.css({ "text-align": "center", "margin-top": "50px" });
+    messageh2.html("No posts yet,");
+    lostContainer.append(messageh2);
+  }
 
 });

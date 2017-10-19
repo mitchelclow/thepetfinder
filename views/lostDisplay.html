@@ -46,6 +46,24 @@
     </div>
   </div>
 
+<script>
+  fetch('./api/userlosts').then(function(response) {
+    var contentType = response.headers.get("content-type");
+    if(contentType && contentType.includes("application/json")) {
+      return response.json();
+    }
+    throw new TypeError("Oops, we haven't got JSON!");
+  })
+  .then(function(json) {
+    for(var lostPet of json)
+    {
+      console.log(lostPet);
+      $('.lost-container').append('<img src="./pets/' + lostPet.photoLost + '" style="max-width: 300px;"/>');
+    }
+   })
+  .catch(function(error) { console.log(error); });
+</script>
+
 <style media="screen">
   .panel {
     margin-top: 40px;
@@ -59,7 +77,7 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="./js/lostDisplay.js" type="text/javascript"></script>
+  <!-- <script src="./js/lostDisplay.js" type="text/javascript"></script> -->
   <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 </body>
 
