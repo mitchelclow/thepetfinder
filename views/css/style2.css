@@ -320,3 +320,8 @@ color: black!important;
   height: 4px;
   width: 1056px;
 }
+.imgurInstructions {
+
+  display: inline-block;
+  background-color: grey;
+}
