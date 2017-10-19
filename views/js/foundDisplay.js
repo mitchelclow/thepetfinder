@@ -62,15 +62,15 @@ $(document).ready(function() {
     newFoundDate.text("Date Found: " + post.dateFound);
 
     // WORKING ON
-    // var newFoundGender = $("<p>");
-    //   if ($(newFoundGender).val() != '') {
-    //     newFoundGender.text("Gender: " + post.genderFound);
-    //   } else {
-    //     newFoundGender.text("Gender: Unknown");
-    //   }
+    var newFoundGender = $("<p>");
+      if (post.genderFound && post.genderFound != '') {
+        newFoundGender.text("Gender: " + post.genderFound);
+      } else {
+        newFoundGender.text("Gender: Unknown");
+      }
       // if (newFoundGender == null) {
-        // newFoundGender.text("Gender: Unknown");// your code here.
-        // };
+      //   newFoundGender.text("Gender: Unknown");// your code here.
+      //   };
       // END WORKING ON - see append below
 
     var newFoundComment = $("<p>");
@@ -92,7 +92,7 @@ $(document).ready(function() {
     newPostPanelHeading.append(newPostTitle);
     newPostPanelBody.append(newFoundAddress);
     newPostPanelBody.append(newFoundDate);
-    // newPostPanelBody.append(newFoundGender);
+    newPostPanelBody.append(newFoundGender);
     newPostPanelBody.append(newFoundComment);
     newPostPanelBody.append(newFoundName);
     newPostPanelBody.append(newFoundEmail);
