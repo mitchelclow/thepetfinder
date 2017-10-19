@@ -85,7 +85,11 @@ $(document).ready(function() {
     var newFoundPhone = $("<p>");
     newFoundPhone.text("Contact Phone: " + post.phoneFound);
 
-    var newFoundPic = $("<div>");
+    var newFoundPic = $('.').attr(src);
+
+
+
+    var newFoundPic = $('img').photoFound('src');
     newFoundPic.text(post.photoFound);
 
     newPostTitle.append(newPostDate);
