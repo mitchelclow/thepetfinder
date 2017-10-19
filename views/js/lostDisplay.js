@@ -51,7 +51,7 @@ $(document).ready(function() {
     newPostTitle.text(post.petName + " ");
 
     var formattedDate = new Date(post.createdAt);
-    formattedDate = moment(formattedDate).format("MMMM Do YYYY, h:mm");
+    formattedDate = moment(formattedDate).format("MMMM Do YYYY, h:mm A");
     newPostDate.text(formattedDate);
 
     var newAnimalType = $("<p>");

@@ -56,7 +56,7 @@ var UserLost = sequelize.define("UserLost", {
     type: DataTypes.STRING,
   },
   photoLost: {
-    type: DataTypes.STRING,
+    type: DataTypes.TEXT,
   }
 });
 

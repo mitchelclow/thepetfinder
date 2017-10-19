@@ -405,7 +405,7 @@ button:hover {
 }
 
 #login-modal input[type=text], input[type=password] {
-  margin-top: 10px;
+  margin-top: 0px;
 }
 
 #div-login-msg,
@@ -551,17 +551,50 @@ button:hover {
 }
 
 
+.registerFields {
+  text-align: left;
+}
 
 
+.emailEnter {
+  margin-left: 10px;
+  margin-right: 20px;
+  margin-bottom: 3px;
+  margin-top: 3px;
+}
 
+.emailWord {
+  margin-right: 29px;
+}
 
+.firstEnter {
+  margin-left: 10px;
+  margin-right: 20px;
+  margin-bottom: 3px;
+  margin-top: 3px;
+}
 
+.lastEnter {
+  margin-left: 10px;
+  margin-right: 20px;
+  margin-bottom: 3px;
+  margin-top: 3px;
+}
 
+.lastWord {
+  margin-right: 1px;
+}
 
+.passEnter {
+  margin-left: 10px;
+  margin-right: 20px;
+  margin-bottom: 3px;
+  margin-top: 3px;
+}
 
-
-
-
+.passWord{
+  
+}
 
 
 

@@ -29,22 +29,28 @@ btnTwo.onclick = function() {
 span.onclick = function() {
     modal.style.display = "none";
 }
-  $("#show-user").html(firstname);
+  $("#show-user").html("firstname");
 // When the user clicks on <span> (x), close the modal
 spanTwo.onclick = function() {
     modalTwo.style.display = "none";
 }
 
 // When the user clicks anywhere outside of the modal, close it
-// window.onclick = function(event) {
-//     if (event.target == modal) {
-//         modal.style.display = "none";
-//     }
-// }
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+
+    }
+}
 
 // When the user clicks anywhere outside of the modal, close it
-// window.onclick = function(event) {
-//     if (event.target == modal) {
-//         modalTwo.style.display = "none";
-//     }
-// }
+window.onclick = function(event) {
+	console.log("This is inside the onclick", event);
+    
+console.log("This is the target attribute");
+    if (event.target.attributes["aria-hidden"]) {
+    	console.log("inside the if");
+    	modal.style.display = "none";
+        modalTwo.style.display = "none";
+    }
+}
