@@ -83,10 +83,6 @@ $(document).ready(function() {
     var newFoundPhone = $("<p>");
     newFoundPhone.text("Contact Phone: " + post.phoneFound);
 
-    // var newFoundPic = $('.').attr(src);
-    // var newFoundPic = $('img').photoFound('src');
-    // newFoundPic.text(post.photoFound);
-
     var newLostPhoto = $(
        "<div>" + '<img src ="pets/' + post.photoFound + '" alt="Pet Image">' +
        "</div>"
